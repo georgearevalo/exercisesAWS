@@ -1,0 +1,2 @@
+# exercisesAWS
+ AWS practice exercises
