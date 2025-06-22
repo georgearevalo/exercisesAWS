@@ -3,3 +3,8 @@
 # compiled output
 build/
 target/
+.mvn/
+# Eclipse files
+.classpath
+# vstudio files
+.vscode/
