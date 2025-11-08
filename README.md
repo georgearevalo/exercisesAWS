@@ -1,21 +1,44 @@
-# exercisesAWS
- AWS practice exercises
-
-
 AWS Certified Cloud Practitioner (CLF-C02) ->  https://aws.amazon.com/certification/certified-cloud-practitioner/
 
 Glosario ->   https://docs.aws.amazon.com/es_es/glossary/latest/reference/glos-chap.html
 
 Overview of Amazon Web Services -> https://d0.awsstatic.com/whitepapers/aws-overview.pdf
 
-
-
 	Fundamentos de la nube de AWS para profesionales (Español de España) | AWS Cloud Practitioner Essentials (Spanish from Spain)
+	
+	What is cloud computing?
+	
+Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).
 
-El término "sin servidor" significa que el código se ejecuta en servidores, pero no es necesario aprovisionar ni administrar dichos servidores. 
+	Benefits of cloud computing
+	--Agility
+	--Elasticity
+	--Cost savings
+	--Deploy globally in minutes
+	
+	Types of cloud computing
 
+The three main types of cloud computing include Infrastructure as a Service, Platform as a Service, and Software as a Service. Each type of cloud computing provides different levels of control, flexibility, and management so that you can select the right set of services for your needs.
 
-Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS
+	Infrastructure as a Service (IaaS): contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT resources. It is most similar to the existing IT resources with which many IT departments and developers are familiar. 
+
+	Platform as a Service (PaaS): removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus on the deployment and management of your applications. This helps you be more efficient as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.
+	
+	Software as a Service (SaaS): provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS are referring to end-user applications (such as web-based email). With a SaaS offering, you don’t have to think about how the service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular software.
+	
+	Infraestructura como código (IaaC)
+
+Serverless
+	"Serverless" es un nuevo paradigma en el que los desarrolladores ya no tienen que gestionar servidores,
+	El término "sin servidor" significa que el código se ejecuta en servidores, pero no es necesario aprovisionar ni administrar dichos servidores. 
+		
+Como interactuar con AWS
+	1. La consola de administración de AWS es una interfaz basada en web para acceder a los servicios de AWS y administrarlos.
+	2. AWS CLI -> AWS Command Line Interface. AWS CLI te permite controlar varios servicios de AWS directamente desde la línea de comandos en una herramienta.
+	3. AWS SDK -> kits de desarrollo de software. Los SDK facilitan el uso de los servicios de AWS a través de una API diseñada para tu lenguaje de programación o tu plataforma.
+
+Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS     https://aws.amazon.com/ec2/faqs/
+	Is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale computing easier for developers.
 	Con una instancia de Amazon EC2 puedes utilizar un servidor virtual para ejecutar aplicaciones en la nube de AWS.
 	
 	Consiste en:
@@ -26,14 +49,18 @@ Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS
 		
 	Al crear EC2 se necesita crear par de clave privada. RSA por ejemplo
 
-	Instance types
+	Instance types   https://aws.amazon.com/ec2/instance-types/
 		On Demand ->
-		General Purpose instances -> Instancias de propósito general
-		Compute Optimized instances -> Instancias de computación optimizada
-		Memory optimized instances -> Instancias optimizadas de memoria
-		Accelerated computing instances -> Instancias de computación acelerada
-		Storage optimized instances -> Instancias optimizadas para el almacenamiento
-		High performance computing (HPC) instances
+		--General Purpose instances -> Instancias de propósito general
+		--Compute Optimized instances -> Instancias de computación optimizada
+		--Memory optimized instances -> Instancias optimizadas de memoria
+		--Accelerated computing instances -> Instancias de computación acelerada
+		--Storage optimized instances -> Instancias optimizadas para el almacenamiento
+		--High performance computing (HPC) Optimized instances
+		--Burstable Instances
+		--Flex instances
+		--High Memory instances
+		--Previous Generation instances
 		
 	Opciones de Compras de instancias
 		On-demand -> bajo demanda, pago por lo que usa
@@ -44,8 +71,9 @@ Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS
 			Recomendado para app de uso constante (ejemplo BD)
 			Reservada convertible -> cambiar tipo de instancia, familia instancia, SO, etc. 66% de descuento
 		Saving Plans -> Planes de ahorro
-			Descuento a largo plazo, hasta 72%
-		Spot
+			Compute Savings Plans provide the most flexibility and help to reduce your costs by up to 66%.
+			EC2 Instance Savings Plans provides the lowest prices, offering savings up to 72%
+		Spot Instances
 			descuento hasta 90% comparado con on-demand
 			Instancias más rentables
 			Util para las cargas de trabajo que son resistentes a los fallos
@@ -57,6 +85,7 @@ Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS
 		Capacity Reservations -> Reservas de capacidad
 			Se reserva la capacidad de las instancias bajo demanda
 			Sin compromiso de tiempo
+		Reserved Instance Marketplace
 		
 Amazon EBS -> Almacenes de instancias y Amazon Elastic Block Store
 
@@ -160,7 +189,7 @@ Escalabilidad, Elasticidad y alta disponibilidad
 	Agilidad
 		Poder tener los nuevos recursos de IT a un clic de distancia	
 		
-Amazon ELB -> Elastic Load Balancing (Equilibrador de carga): balanceador de carga que direcciona tráfico
+Amazon ELB -> Elastic Load Balancing (Equilibrador de carga): balanceador de carga que direcciona tráfico  https://aws.amazon.com/es/elasticloadbalancing/
 	es el servicio de AWS que distribuye automáticamente el tráfico entrante de la aplicación entre varios recursos como, por ejemplo, instancias de Amazon EC2. 
 	
 	Load Balancers  son servidores que reenvían el tráfico de Internet a múltiples servidores (Instancias EC2) en sentido descendente
@@ -195,7 +224,7 @@ Arquitectura de acoplamiento debil
 		Enrutar el tráfico a los firewalls
 		Detección de intrusos
 		
-	ASG -> Auto Scaling Group, en función de demanda y se integra con ELB
+	ASG -> Auto Scaling Group, en función de demanda y se integra con ELB  https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html
 		Objetivo
 			-Reducir (añadir instancias de EC2) para adaptarse a un aumento de la carga
 			-Aumentar (eliminar instancias de EC2) para coincida con una disminución de la carga
@@ -212,7 +241,7 @@ Arquitectura de acoplamiento debil
 			
 	
 	
-Amazon SQS -> Amazon Simple Queue Service (SQS)
+Amazon SQS -> Amazon Simple Queue Service (SQS)   https://aws.amazon.com/sqs/
 	SQS es un servicio de cola de mensajes. Permite enviar, almacenar y recibir mensajes entre componentes de software a cualquier volumen.
 	Escala desde 1 mensaje por segundo hasta 10000 por segundo
 	No hay límite en el número de mensajes que puede haber en la cola
@@ -221,11 +250,11 @@ Amazon SQS -> Amazon Simple Queue Service (SQS)
 		Standard
 		FIFO
 
-Amazon SNS -> Amazon Simple Notification Service (SNS)
+Amazon SNS -> Amazon Simple Notification Service (SNS)		https://aws.amazon.com/sns/
 	Es un servicio de mensajería pub/sub de alta disponibilidad, duradero, seguro y totalmente gestionado que permite desaclopar servicios, sistemas distribuidos y aplicaciiones sin servidor. Utiliza un sistema basado en push.
 	Es similar a Amazon SQS porque se utiliza para enviar mensajes a los servicios, pero también puede enviar notificaciones a usuarios finales.
 		
-Amanzon Kinesis
+Amanzon Kinesis		https://aws.amazon.com/kinesis/
 	Streaming de big data en tiempo real
 	Servicio gestionado para recopilar, procesar y analizar datos de streaming en tiempo real a cualquier  escala
 	Kinesis Data Streams: streaming de baja latencia para ingerir datos  a escala desde cientos de miles de fuentes
@@ -237,50 +266,53 @@ Amazon MQ
 	Servicio gestionado de intermediación/broker de mensajes para RabbitMQ, ActiveMQ
 	Tiene la función tanto de SQS como la de tema de SNS
 
-Docker
+Docker		https://aws.amazon.com/docker/
 	Se puede definir como una plataforma de desarrollo de software para desplegar aplicaciones.
 	Las aplicaciones con Docker se empaquetan en lo que se llaman contenedores de software que pueden ejecutarse.
 	Funciona en cualquier lenguaje, sistema operativo o tecnología
 	Docker se puede entender como una especie de tecnología de virtualización, pero no exactamente.
 
-Amazon ECS -> Amazon Elastic Container Service
+Amazon ECS -> Amazon Elastic Container Service	https://aws.amazon.com/ecs/
 	Es un sistema de administración de contenedores altamente escalable y de alto rendimiento que permite ejecutar y escalar aplicaciones en contenedores en AWS. Amazon ECS admite y permite lanzar contenedores de Docker.
 	AWS se encarga de parar o iniciar los contenedores
 	Tiene integraciones con el Application Load Balancer
 	
 	
-Amazon EKS -> Amazon Elastic Kubernetes Service
+Amazon EKS -> Amazon Elastic Kubernetes Service		https://aws.amazon.com/eks/
 	Es un servicio completamente administrado que se puede usar para ejecutar Kubernetes en AWS. 
+	Start, run, and scale Kubernetes without thinking about cluster management
+		--Accelerate time to production
+		--Run Kubernetes in any environment
+		--Improve performance, availability, and resiliency
+		--Enhance security of your systems
 	
-AWS Fargate
+AWS Fargate		https://aws.amazon.com/fargate/
 	Es un motor de computación sin servidor para contenedores. Funciona tanto con Amazon ECS como con Amazon EKS. 
 	¿Pero cuál es la diferencia?
 		Con Fargate, tú no aprovisionas la infraestructura, no hay instancias EC2 que gestionar. Es mucho, mucho más sencillo. Es una oferta sin servidor.
 		Aquí es donde vas a almacenar tus imágenes de Docker para que luego puedan ser ejecutadas por ECS o Fargate.
 		
-Amazon ECR -> Amazon Elastic Container Services
+Amazon ECR -> Amazon Elastic Container Registry		https://aws.amazon.com/ecr/
+	Easily store, share, and deploy your container software anywhere.
 	Es un registro privado de Docker en AWS. ¿Por qué? Existe un registro público donde podemos encontrar imágenes de Docker, imágenes como Node, Java, Reddit y muchas otras, que es Docker Hub. No obstante, ese es público.	
 
 	Con Fargate, AWS simplemente ejecutará los contenedores por ti en función de la CPU y RAM que necesites.
 	
-Serverless
-	"Serverless" es un nuevo paradigma en el que los desarrolladores ya no tienen que gestionar servidores,
-	
-AWS Lambda
+AWS Lambda	https://aws.amazon.com/lambda/
 	Es un servicio que permite ejecutar código sin necesidad de aprovisionar ni administrar servidores. 
 	Se paga por las solicitudes que se realizan de ejecución y por el tiempo de computación.
 	Integrado con todo el conjunto de servicios de AWS
 	Fácil monitorización con AWS CloudWatch
 	se paga por llamadas, los primeros. El primer millón de solicitudes es totalmente gratuito. A partir de ese momento vas a pagar por las llamadas que hagas y cero punto 0,20 $ por cada millón de solicitudes. O también lo que sería igual a 3.200.000 segundos si la función es de 128 megabytes de RAM y después un dólar por 600.000 por segundo, no son precios exageradamente altos.
 	También se paga por duración
+		--Increase developer agility
+		--Boost application performance
 	
-	
-	
-AWS API Gateway
+AWS API Gateway		https://aws.amazon.com/api-gateway/
 	con API Gateway crear APIS que nos permite hacer llamadas al servicio de Amazon Web Services AWS Lambda
 	Es un servicio totalmente gestionado para que los desarrolladores puedan crear, publicar, mantener, supervisar y asegurar fácilmente las APIs de servicios, y también es escalable
 	
-AWS Batch
+AWS Batch	https://aws.amazon.com/batch/
 	El servicio que nos permite realizar procesamiento por lotes, es un servicio totalmente gestionado en cualquier escala con AWS Batch. 
 	Podemos ejecutar eficientemente 100.000 trabajos de computación por lotes en AWS. 
 	Un trabajo por lotes, digámoslo así, es un trabajo con un inicio y un final, en contraposición a uno continuo. Batch. 
@@ -299,132 +331,47 @@ AWS Batch vrs Lambda
 		
 Amazon Lightsail
 	Nos puede servir para servidores virtuales, almacenamiento, bases de datos y redes, entre otras cosas.
-	Para personas con poca experiencia en cloud
+	Para personas con poca experiencia en cloud.
+		--Create a website fast
+		--Scale easily
+		--Security and reliability
 	
-AWS Amplify Documentation
+AWS Amplify 	https://docs.aws.amazon.com/amplify/
 	Use AWS Amplify to develop and deploy cloud-powered mobile and web applications. Amplify provides frontend libraries, UI components, and backend building for fullstack applications on AWS. Amplify Hosting provides a continuous delivery and hosting service for fullstack cloud applications.
 	
 	https://main.dld2wjdmztsz3.amplifyapp.com/
 	
+Regions
+	--AWS has the concept of a Region, which is a physical location around the world where we cluster data centers. We call each group of logical data centers an Availability Zone. Each AWS Region consists of a minimum of three, isolated, and physically separate AZs within a geographic area.
+	--Cada región posee varias AZ separadas y fisícamente aisladas dentro de una región geográfica
+	--Todos los servicios de AWS poseen alta disponibilidad
 	
-AWS crea zonas de disponibilidad AZ para tener alta disponibilidad
+Availability Zones AZ
+	Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region. 
+	AWS crea zonas de disponibilidad AZ para tener alta disponibilidad
 	Se debe de elegir zona según 4 puntos:
 		1. Conformidad con los requisitos y gobernanza de datos, datos deben de estar alojados en ubicación específica?
 		2. Próximidad a los clientes, lo más cercano posible
 		3. Servicios - Características disponibles en cada región
 		4. Precios, según región puede ser más caro un servicio que en otra región
-		
-	Cada región posee varias AZ separadas y fisícamente aisladas dentro de una región geográfica
-	Todos los servicios de AWS poseen alta disponibilidad
-	
-	Ubicaciones periféricas
-		CDN Redes de entrega de contenido
-		
-Como interactuar con AWS
-	1. La consola de administración de AWS es una interfaz basada en web para acceder a los servicios de AWS y administrarlos.
-	2. AWS CLI -> AWS Command Line Interface. AWS CLI te permite controlar varios servicios de AWS directamente desde la línea de comandos en una herramienta.
-	3. AWS SDK -> kits de desarrollo de software. Los SDK facilitan el uso de los servicios de AWS a través de una API diseñada para tu lenguaje de programación o tu plataforma.
-	
-Herramientas de administración - 
 
-AWS CloudFormation -> IaaC
-	Con AWS CloudFormation, puedes tratar tu infraestructura como código. Esto significa que puedes crear un entorno escribiendo líneas de código en lugar de usar la consola de administración de AWS para aprovisionar recursos individualmente
-	Con CloudFormation tenemos una forma declarativa de esbozar, de dibujar una infraestructura de AWS para cualquier recurso.
-	podemos desplegar una infraestructura como código IaaC
-	Productividad, es posible distruir y volver a crear una infraestructura en el cloud sobre la marcha
-	
-Amazon Cloud Development Kit -> CDK
-	Permite definir una infraestructura en la nube utilizando un lenguaje conocido.
-	Se conecta con AWS CloudFormation 
-
-AWS Elastic Beanstalk -> PaaS
-	Con AWS Elastic Beanstalk, el usuario proporciona ajustes de código y configuración, y Elastic Beanstalk implementa los recursos necesarios para realizar tareas:
-		-Es una visión centrada en el desarrollador de la implementación de una app en AWS
-		-Utiliza todos los componentes que hemos visto antes: EC2, ASG, ELB, RDS, etc.
-		-Se tiene control total sobre la configuración
-		-Es gratuito, pero se paga por las instancias subyacentes
-		-Servicio gestionado, todo es manejado por Beanstalk, sólo el código de la app es responsabilidad del desarrollador
-	Existen tres modelos de arquitectura:
-		1. Despliegue de una única instancia.
-		2. LB + ASG:  lo que sería el balanceador con el grupo de escalado automático, que es ideal para aplicaciones web de producción o preproducción y
-		3. Sólo ASG grupo de escalado automático, ideal para app no web en producción (para trabajadores, etc)
-	Tiene soporte para muchas plataformas o lenguajes
-	Con Beanstalk, el desarrollador solo se preocupa por el código
-	
-AWS CodeDeploy
-	Desplegar apps automáticamente
-	Funciona con instancias EC2
-	Funciona con servidores locales
-	Servicio híbridos
-	Los servidores deber ser aprivisionados y configurados previamente con el agente de CodeDeploy
-	
-AWS CodeCommit
-	Antes de enviar el código de la app a los servidores, es necesario almacenario en algún lugar
-	Para control de versiones, regularmente se utiliza GitHub
-	Utilizar tecnololía GitHub
-	Los cambios en el código se versionan automáticamente
-	Ventajas:
-		Totalmente gestionado
-		Escalable y de alta disponibilidad
-		Privado, seguro, integrado con AWS
-	
-AWS CodeBuild
-	Servicio de construcción de código en el Cloud
-	Compila el código fuente, ejecuta las pruebas y produce paquetes que están listos para ser desplegados por CodeDeploy, por ejemplo
-	Contruye el código y proporciona un artefacto listo para desplegar
-	Totalmente gestionado, sin servidor
-	Sólo se paga por el tiempo de compilación
-	
-AWS CodePipeline (Capa de orquestación)
-	Orquesta los diferentes pasos para que el código sea empujado automáticamente  a producción
-	Código -> Construir -> Probar -> Aprovionar -> Desplegar
-	Base de CICD (Integración continua y entrega continua)
-	Ventajas
-		Totalmente gestionado, compatible con CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, CloudFormation, GitHub y plugins
+Content Delivery Network CDN
+	--A content delivery network (CDN) is a network of interconnected servers that speeds up webpage loading for data-heavy applications
+	--Una red de entrega de contenido (CDN) es una red de servidores interconectados que acelera la carga de las páginas web para las aplicaciones que tienen un uso intensivo de datos. CDN puede significar red de entrega de contenido o red de distribución de contenido.	
+	--Ubicaciones periféricas
+	--Why is a CDN important? The primary purpose of a content delivery network (CDN) is to reduce latency, or reduce the delay in communication created by a network's design.
+	--What are the benefits of CDNs?
+		--Reduce page load time
+		--Reduce bandwidth costs
+		--Increase content availability
+		--Improve website security
 		
-AWS CodeArtifact
-	Es una gestión de artefactos segura, escalable y rentable para el desarrollo de software
-	Paquetes de software dependen unos de otros, esto se le llama dependencia de Software
-	Almacenar y recuperar estas dependencias se llama Gestión de artefactos
-	Funciona con herramientas comunes de gestión de dependencias como Maven, Gradle, npm, yarn, twine, pip y Nuget
-	
-AWS CodeStar
-	Interfaz de usuario unificada para gestionar fácilmente las actividades de desarrollo de software en un solo lugar
-	Es un forma rápida de empezar a configurar correctamente CodeCommit, CodePipeline, CodeBuild, CodeDeploy, Elastic  Beanstalk, EC2, etc
-
-AWS Cloud9
-	Es un IDE en la nube para escribir, ejecutar y depurar código
-	Permite colaboración de código en tiempo real
-	
-AWS System Manager (SSM)
-	Ayuda a gestionar tus sistemas EC2 y On-Premises a escala
-	Otro servicio híbrido de AWS
-	Carácteristicas importantes
-		Automatización de parches para mejorar la normativa
-		Ejecuta comandos en toda una flota de servidores
-		Almacena la configuración de los parámetros con el almacén de parámetros SSM
-	Cómo funciona
-		Se necesita instalar el agente SSM en los sistemas que se controlan
-		Con el agente, es posible ejecutar comandos, parchear y configurar nuestros servidores
-		
-AWS OpsWorks
-	Chef y Puppet ayudan a realizar la configuración del servidor de forma automática, o acciones repetitivas
-	Funciona con AC2 y VM On-Premises
-	Es una alternativa a AWS SSM		
-	
-Servicios Globales
-
-Amazon Route 53
-	Es un DNS gestionado (Sistemas de nombres de dominio)
-	DNS es una colección de reglas y registros que ayuda a los clientes a entender cómo llegar a un servidor a través de las URL
-	
-	Políticas enrutamiento
-		Simple Routing Policy, no hay controles de salud
-		Weighted Routing Policy
-		Latency Routing Policy
-		Failover Routing Policy, Recuperación de desastres, tiene control de salud
-		
-AWS CloudFront
+AWS CloudFront	https://aws.amazon.com/cloudfront/
+	--Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience.
+		--Reduce latency
+		--Improve security
+		--Cut costs
+		--Customize the code
 	Es un servicio de entrega de contenido.
 	Red de entrega de contenido (CDN)
 	Mejora el rendimiento de lectura, el contenido se almacena en caché en edge location
@@ -450,6 +397,118 @@ AWS CloudFront
 			Archivos se actualizan en tiempo real
 			Sólo lectura
 			Ideal para contenidos dinámicos que deben estar disponibles con baja latencia en pocas regiones
+	
+Herramientas de administración - 
+
+AWS CloudFormation -> IaaC	https://aws.amazon.com/cloudformation/
+	--Speed up cloud provisioning with infrastructure as code
+	Con AWS CloudFormation, puedes tratar tu infraestructura como código. Esto significa que puedes crear un entorno escribiendo líneas de código en lugar de usar la consola de administración de AWS para aprovisionar recursos individualmente
+	Con CloudFormation tenemos una forma declarativa de esbozar, de dibujar una infraestructura de AWS para cualquier recurso.
+	podemos desplegar una infraestructura como código IaaC
+	Productividad, es posible distruir y volver a crear una infraestructura en el cloud sobre la marcha
+		--Scale your infrastructure
+		--Extend and manage your infrastructure
+		--Automate resource management
+	
+Amazon Cloud Development Kit -> CDK		https://aws.amazon.com/cdk/
+	Permite definir una infraestructura en la nube utilizando un lenguaje conocido.
+	Se conecta con AWS CloudFormation 
+
+AWS Elastic Beanstalk -> PaaS	https://aws.amazon.com/elasticbeanstalk/
+	--Easily migrate, deploy, and scale full-stack applications on AWS
+	Con AWS Elastic Beanstalk, el usuario proporciona ajustes de código y configuración, y Elastic Beanstalk implementa los recursos necesarios para realizar tareas:
+		-Es una visión centrada en el desarrollador de la implementación de una app en AWS
+		-Utiliza todos los componentes que hemos visto antes: EC2, ASG, ELB, RDS, etc.
+		-Se tiene control total sobre la configuración
+		-Es gratuito, pero se paga por las instancias subyacentes
+		-Servicio gestionado, todo es manejado por Beanstalk, sólo el código de la app es responsabilidad del desarrollador
+	Existen tres modelos de arquitectura:
+		1. Despliegue de una única instancia.
+		2. LB + ASG:  lo que sería el balanceador con el grupo de escalado automático, que es ideal para aplicaciones web de producción o preproducción y
+		3. Sólo ASG grupo de escalado automático, ideal para app no web en producción (para trabajadores, etc)
+	Tiene soporte para muchas plataformas o lenguajes
+	Con Beanstalk, el desarrollador solo se preocupa por el código
+	
+AWS CodeDeploy	https://aws.amazon.com/codedeploy/
+	Automate code deployment to maintain application uptime
+	Desplegar apps automáticamente
+	Funciona con instancias EC2
+	Funciona con servidores locales
+	Servicio híbridos
+	Los servidores deber ser aprivisionados y configurados previamente con el agente de CodeDeploy
+	
+AWS CodeCommit	https://aws.amazon.com/codecommit/
+	--Securely host highly scalable private Git repositories and collaborate on code
+	Antes de enviar el código de la app a los servidores, es necesario almacenario en algún lugar
+	Para control de versiones, regularmente se utiliza GitHub
+	Utilizar tecnololía GitHub
+	Los cambios en el código se versionan automáticamente
+	Ventajas:
+		Totalmente gestionado
+		Escalable y de alta disponibilidad
+		Privado, seguro, integrado con AWS
+	
+AWS CodeBuild		https://aws.amazon.com/codebuild/
+	--Build and test code with automatic scaling
+	Servicio de construcción de código en el Cloud
+	Compila el código fuente, ejecuta las pruebas y produce paquetes que están listos para ser desplegados por CodeDeploy, por ejemplo
+	Contruye el código y proporciona un artefacto listo para desplegar
+	Totalmente gestionado, sin servidor
+	Sólo se paga por el tiempo de compilación
+	
+AWS CodePipeline (Capa de orquestación)		https://aws.amazon.com/codepipeline/
+	--Automate continuous delivery pipelines for fast and reliable updates
+	Orquesta los diferentes pasos para que el código sea empujado automáticamente  a producción
+	Código -> Construir -> Probar -> Aprovionar -> Desplegar
+	Base de CICD (Integración continua y entrega continua)
+	Ventajas
+		Totalmente gestionado, compatible con CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, CloudFormation, GitHub y plugins
+		
+AWS CodeArtifact	https://aws.amazon.com/codeartifact
+	--Secure, scalable, and cost-effective package management for software development
+	Es una gestión de artefactos segura, escalable y rentable para el desarrollo de software
+	Paquetes de software dependen unos de otros, esto se le llama dependencia de Software
+	Almacenar y recuperar estas dependencias se llama Gestión de artefactos
+	Funciona con herramientas comunes de gestión de dependencias como Maven, Gradle, npm, yarn, twine, pip y Nuget
+	
+AWS CodeStar	https://aws.amazon.com/es/codestar/
+	Interfaz de usuario unificada para gestionar fácilmente las actividades de desarrollo de software en un solo lugar
+	Es un forma rápida de empezar a configurar correctamente CodeCommit, CodePipeline, CodeBuild, CodeDeploy, Elastic  Beanstalk, EC2, etc
+
+AWS Cloud9	https://aws.amazon.com/cloud9
+	Es un IDE en la nube para escribir, ejecutar y depurar código
+	Permite colaboración de código en tiempo real
+	
+AWS System Manager (SSM)	https://aws.amazon.com/systems-manager/
+	--Manage nodes at scale on AWS and in multicloud and hybrid environments
+	Ayuda a gestionar tus sistemas EC2 y On-Premises a escala
+	Otro servicio híbrido de AWS
+	Carácteristicas importantes
+		Automatización de parches para mejorar la normativa
+		Ejecuta comandos en toda una flota de servidores
+		Almacena la configuración de los parámetros con el almacén de parámetros SSM
+	Cómo funciona
+		Se necesita instalar el agente SSM en los sistemas que se controlan
+		Con el agente, es posible ejecutar comandos, parchear y configurar nuestros servidores
+		
+AWS OpsWorks	https://aws.amazon.com/documentation-overview/opsworks/
+	--AWS OpsWorks is a configuration management service that provides managed instances of Chef and Puppet. Chef and Puppet are automation platforms that allow you to use code to automate the configurations of your servers. 
+	Chef y Puppet ayudan a realizar la configuración del servidor de forma automática, o acciones repetitivas
+	Funciona con AC2 y VM On-Premises
+	Es una alternativa a AWS SSM		
+	
+Servicios Globales
+
+Amazon Route 53		https://aws.amazon.com/route53/
+	--A reliable and cost-effective way to route end users to Internet applications
+	Es un DNS gestionado (Sistemas de nombres de dominio)
+	DNS es una colección de reglas y registros que ayuda a los clientes a entender cómo llegar a un servidor a través de las URL
+	
+	Políticas enrutamiento
+		Simple Routing Policy, no hay controles de salud
+		Weighted Routing Policy
+		Latency Routing Policy
+		Failover Routing Policy, Recuperación de desastres, tiene control de salud
 					
 S3 Transfer Acceleration
 	Aumenta la velocidad de transferencia transfiriendo el archivo a una ubicación edge de AWS que reenviará los datos al bucket de S3 en la región de destino
@@ -470,9 +529,10 @@ AWS Global Accelerator
 			Mejora el rendimiento de una amplia gama de aplicaciones sobre TCP y UDP
 			Bueno para casos de uso de HTTP que requieren direcciones IP estáticas y que requieran conmutación por error regional dterminista y rápida
 			
-AWS Outposts
+AWS Outposts	https://aws.amazon.com/outposts
+	--Run AWS infrastructure and services on premises for a truly consistent hybrid experience
 	Ampliar la infraestructura y los servicios de AWS a diferentes ubicaciones, incluido tu centro de datos en las instalaciones.
-	Cloud híbrido: empresass que mantienen una infraestructura local junto a una infraestructura en la nube
+	Cloud híbrido: empresas que mantienen una infraestructura local junto a una infraestructura en la nube
 	Los Outposts de AWS son racks de servidores que ofrecen la misma infraestructura, servicios, API y herramientas de AWS para crear tus propias aplicaciiones en las instalaciones al igual que en el Cloud
 	Ventajas
 		Acceso de baja latencia a los sistemas locales
@@ -480,17 +540,20 @@ AWS Outposts
 		Residencia de datos
 		Migración más fácil de onpremises a el Cloud
 		
-AWS WaveLenght
+AWS WaveLenght	https://aws.amazon.com/wavelength/
+	--Run applications using AWS Infrastructure and services in AWS telco partners’ data centers to meet your low latency, data residency, and resiliency needs.
 	WaveLenght Zones son despliegues de infraestructura incrustados en los centros de datos de los proveedores de telecomunicaciones de las redes 5G
 	Lleva los servicios de AWS al límite de las redes 5G
 	El tráfico no sale de la red del proveedor de servicios
 	
-AWS Local Zones
+AWS Local Zones	https://aws.amazon.com/about-aws/global-infrastructure/localzones/
+	--Run applications on AWS infrastructure closer to your end users and workloads
 	Coloca la informática, el almacenamiento, la base de datos y otros servicios de AWS más cerca de los usuarios finales para ejecutar aplicaciones sensibles a latencia	
 
 Redes:
 
 Amazon VPC -> Amazon Virtual Private Cloud 
+	--Define and launch AWS resources in a logically isolated virtual network
 	Amazon VPC permite aprovisionar una sección aislada de AWS Cloud. En esta sección aislada, puedes iniciar recursos en una red virtual definida. Dentro de una nube virtual privada (VPC), puedes organizar los recursos en subredes. Una subred es una sección de una VPC que puede contener recursos como las instancias de Amazon EC2
 	
 	Dirección IP
@@ -598,7 +661,9 @@ Amazon Route 53
 	
 Almacenamiento y base de datos:
 	
-Amazon S3 -> Amazon Simple Storage Service. Ventaja Sin servidor
+Amazon S3 -> Amazon Simple Storage Service.  https://aws.amazon.com/s3/
+	--Object storage built to retrieve any amount of data from anywhere
+	Ventaja Sin servidor 
 	Es un servicio que proporciona almacenamiento en el nivel de objeto. Amazon S3 almacena datos como objetos en buckets.
 	Permite almacenar objetos (archivos) en buckets (directorios)
 	Buckets se definen a nivel de región
@@ -610,6 +675,11 @@ Amazon S3 -> Amazon Simple Storage Service. Ventaja Sin servidor
 		Debe empezar por letra minúscula o número
 		No debe empezar por el prefijo xn--
 		No debe terminar con el sufijo -s3alias
+		
+	--Scalability
+	--Durability and availability
+	--Security and data protection
+	--Lowest price and highest performance
 	
 	Clases de almacenamiento de Amazon S3
 		-Amazon S3 Standard proporciona alta disponibilidad para los objetos.
@@ -621,27 +691,37 @@ Amazon S3 -> Amazon Simple Storage Service. Ventaja Sin servidor
 		-Amazon S3 Glacier Deep Archive admite la conservación a largo plazo y la preservación digital de datos a los que se puede acceder una o dos veces al año. La clase de almacenamiento de objetos más barata, ideal para archivar
 		-Amazon S3 Outposts, Ofrece almacenamiento de objetos a su entorno local de AWS Outposts.
 	
-Amazon RDS -> Amazon Relational Database Service 
+Amazon RDS -> Amazon Relational Database Service   https://aws.amazon.com/rds/
+	--Easy to manage relational databases optimized for total cost of ownership
 	Es un servicio que permite ejecutar bases de datos relacionales en AWS Cloud.
 	
 	Motores de base de datos de Amazon RDS
 		Amazon RDS está disponible en seis motores de base de datos, que optimizan la memoria, el rendimiento o la entrada/salida (E/S). Los motores de base de datos compatibles incluyen:
-			-Amazon Aurora
+			*Amazon Aurora ->   database-dev     UserAdmin: admin  admin123$   FirstDB
 			-PostgreSQL
 			-MySQL
 			-MariaDB
 			-Oracle Database
 			-Microsoft SQL Server
 			
-Amazon DynamoDB
+Amazon DynamoDB - https://aws.amazon.com/dynamodb/
+	--Serverless, fully managed, distributed NoSQL database with single-digit millisecond performance at any scale
 	Es un servicio de base de datos clave-valor. Ofrece un rendimiento de milisegundos de un solo dígito a cualquier escala
 	Bases de datos no relacionales, en una base de datos no relacional, se crean tablas. Una tabla es un lugar en el que se pueden almacenar y consultar datos
 	
-Amazon Redshift
+Amazon Redshift - https://aws.amazon.com/redshift/
+	--Deliver unmatched price-performance at scale with SQL for your data lakehouse
 	Es un servicio de almacenamiento de datos que puedes usar para analizar big data - Datawarehouse
 	
-Amazon DMS -> AWS Database Migration Service
+Amazon DMS -> AWS Database Migration Service - https://aws.amazon.com/dms/
 	Permite migrar bases de datos relacionales, bases de datos no relacionales y otros tipos de almacenes de datos.
+	
+Storage:
+AWS Backup - https://aws.amazon.com/es/backup/
+	--Administre y automatice la protección de los datos de manera centralizada
+	
+AWS Elastic Disaster Recovery
+	--
 	
 Servicios de bases de datos adicionales
 	Amazon DocumentDB Es un servicio de base de datos de documentos compatible con cargas de trabajo de MongoDB. (MongoDB es un programa de base de datos de documentos).
@@ -652,7 +732,7 @@ Servicios de bases de datos adicionales
 	Amazon DAX -> Amazon DynamoDB Accelerator es una caché en memoria para DynamoDB
 	
 Seguridad:
-	Modelo de responsabilidad compartida de AWS
+	Modelo de responsabilidad compartida de AWS  https://aws.amazon.com/compliance/shared-responsibility-model/
 		AWS es responsable de algunas piezas del entorno y tú (el cliente) de otras. Este concepto se conoce como modelo de responsabilidad compartida.
 	
 	AWS: Seguridad de la nube
@@ -661,7 +741,7 @@ Seguridad:
 	Clientes: Seguridad en la nube
 		Los clientes son responsables de la seguridad de todo lo que crean y ponen en la nube de AWS.
 		
-Amazon IAM -> AWS Identity and Access Management 
+Amazon IAM -> AWS Identity and Access Management   https://aws.amazon.com/iam/
 	Permite administrar el acceso a los recursos y servicios de AWS de manera segura. 
 	
 	Funciones de IAM, que se analizan detalladamente en esta lección:
@@ -959,7 +1039,7 @@ Precios y soporte
 		Comparte con cualquier cuenta o dentro de tu organización
 		Evita la duplicación de recursos
 		
-	WS Service Catalog
+	AWS Service Catalog
 		Servicio que permite a las empresas organizar y gestionar catálogos de servicios aprobados para que se utilicen en toda la empresa en concreto.
 		
 	AWS Budgets
@@ -980,6 +1060,13 @@ Precios y soporte
 			-Business Support
 			-Enterprise On-Ramp
 			-Enterprise
+		
+		Planes de Soporte
+			Basic, Servicio de atención al cliente 24-7 y comunidades, Trusted Advisor limitado, Personal Health Dashboard
+			Developer, Basic+, acceso por correo en horario laboral
+			Business, 24-7, Destinado a cargas de trabajo de producción, Trusted Advisor ilimitado
+			Enterprise On-Ramp, Acceso a un grupo de Gestores Técnicos de Cuentas TAM
+			Enterprice, cargas de trabajo para misión crítica, un TAM asignado
 			
 		Administrador técnico de cuenta (TAM)
 			Los planes Enterprise On-Ramp y Enterprise Support incluyen acceso a un administrador técnico de cuenta (TAM).
@@ -1004,23 +1091,17 @@ Precios y soporte
 		Cost Anomaly Detection, monitorización continua de tus costes y uso mediante ML para detectar gastos inusuales, envía alertas e indica origen de alerta
 		AWS Services Quotas, Avisa cuando se está cerca de un umbral de valor de cuota de servicio
 		AWS Trusted Advisor, no se debe de instalar nada, analiza cuentas de AWS y proporciona recomendaciones en 5 categorías, optimización de costes, Rendimiento, Seguridad, Tolerancia a fallos y límites del servicio
-	
-	Planes de Soporte
-		Basic, Servicio de atención al cliente 24-7 y comunidades, Trusted Advisor limitado, Personal Health Dashboard
-		Developer, Basic+, acceso por correo en horario laboral
-		Business, 24-7, Destinado a cargas de trabajo de producción, Trusted Advisor ilimitado
-		Enterprise On-Ramp, Acceso a un grupo de Gestores Técnicos de Cuentas TAM
-		Enterprice, cargas de trabajo para misión crítica, un TAM asignado
 			
 		
 		
 		
 Migración e Innovación
 
-	AWS CAF -> AWS Cloud Adoption Framework	
+	AWS CAF -> AWS Cloud Adoption Framework	 https://aws.amazon.com/cloud-adoption-framework/
+		--The AWS Cloud Adoption Framework (AWS CAF) leverages AWS experience and best practices to help you digitally transform and accelerate your business outcomes through innovative use of AWS. AWS CAF identifies specific organizational capabilities that underpin successful cloud transformations. These capabilities provide best practice guidance that helps you improve your cloud readiness. AWS CAF groups its capabilities in six perspectives: Business, People, Governance, Platform, Security, and Operations. Each perspective comprises a set of capabilities that functionally related stakeholders own or manage in the cloud transformation journey. Use the AWS CAF to identify and prioritize transformation opportunities, evaluate and improve your cloud readiness, and iteratively evolve your transformation roadmap.
 		Ofrece directrices sobre seis áreas de interés, denominadas perspectivas.
 		
-	Perspectiva de negocio
+	Perspectiva de comercial-business
 		Garantiza que las TI estén en línea con las necesidades empresariales y que las inversiones en TI se vinculen a los resultados empresariales clave.
 		Utiliza la perspectiva de negocio para crear un caso empresarial sólido de adopción de la nube y priorizar las iniciativas de adopción. Asegúrate de que tus estrategias y objetivos empresariales estén en línea con tus estrategias y objetivos de TI.
 		Los roles comunes en la perspectiva de negocio incluyen:
@@ -1029,14 +1110,14 @@ Migración e Innovación
 			-Responsables de presupuestos
 			-Inversores estratégicos
 			
-	Perspectiva de personal
+	Perspectiva de personal-People
 		Apoya el desarrollo de una estrategia de administración de cambio en toda la organización para adoptar la nube con éxito.
 		Los roles comunes en la perspectiva de personal incluyen:
 			-Recursos humanos
 			-Plantilla
 			-Administradores de personal
 	
-	Perspectiva de gobernanza
+	Perspectiva de gobernanza-Governance
 		Se centra en las habilidades y procesos para alinear la estrategia de las TI con la estrategia empresarial. Esto garantiza que se maximice el valor empresarial y se minimicen los riesgos.
 		Los roles comunes en la perspectiva de gobernanza incluyen:
 			-Director de información (CIO)
@@ -1045,14 +1126,14 @@ Migración e Innovación
 			-Analistas empresariales
 			-Administradores de cartera
 			
-	La perspectiva de plataforma
+	La perspectiva de plataforma-Security
 		Incluye principios y patrones para implementar nuevas soluciones en la nube y migrar cargas de trabajo de las instalaciones a la nube.
 		Los roles comunes en la perspectiva de plataforma incluyen:
 			-Director de tecnología
 			-Administradores de TI
 			-Arquitectos de soluciones
 			
-	Perspectiva de seguridad
+	Perspectiva de seguridad-Operations
 		Garantiza que la organización cumpla los objetivos de seguridad en materia de visibilidad, auditabilidad, control y agilidad. 
 		Los roles comunes en la perspectiva de seguridad incluyen:
 			-Director de seguridad de la información (CISO)
@@ -1064,6 +1145,12 @@ Migración e Innovación
 		Los roles habituales en la perspectiva de operaciones incluyen:
 			-Administradores de operaciones de TI
 			-Administradores de soporte de TI
+			
+	Beneficios
+		-Reduzca los riesgos comerciales
+		-Mejore el rendimiento ambiental, social y de gobernanza
+		-Aumente los ingresos
+		-Mejore la eficiencia operativa
 			
 Estrategias de Migración
 	-Volver a alojar-Rehosting  "lift-and-shift" implica mover aplicaciones sin realizar cambios. 
@@ -1093,19 +1180,38 @@ Traspaso a la nube
 	Well-Architected Framework se basa en seis pilares:
 		-Excelencia operativa-Operational Excellence
 			es la capacidad de ejecutar y supervisar sistemas para ofrecer valor empresarial y mejorar continuamente los procesos y procedimientos de soporte.
+			--Operations as Code
+			--Frequent, small, reversible changes
+			--Anticipate failure
+			--learn from all mistakes
 		-Seguridad-Security
 			es la capacidad de proteger la información, los sistemas y los activos y, al mismo tiempo, ofrecer valor empresarial mediante evaluaciones de riesgos y estrategias de mitigación.
+			--Use a foundational identity
+			--Security at all layers
+			--Encription in transit y at rest
 		-Fiabilidad-Reliability
 			es la capacidad de un sistema para hacer lo siguiente:
 				-Recuperarse de las interrupciones de la infraestructura o del servicio
 				-Adquirir recursos de computación de forma dinámica para satisfacer la demanda
 				-Mitigar interrupciones como configuraciones erróneas o problemas transitorios de red
+			--Automatic Failure recovery
+			--Scale horizontally
+			--Stop guessin capacity
 		-Eficiencia de rendimiento-Performance Efficiency
 			es la capacidad de utilizar los recursos de computación de forma eficiente para satisfacer los requisitos del sistema y mantener esa eficiencia a medida que la demanda cambia y evoluciona la tecnología.
+			--Pick the right tool for de the job
+			--Use servelees
+			--Go global in minutus
 		-Optimización de costes-Cost Optimization
 			es la capacidad de ejecutar sistemas para ofrecer valor empresarial al precio más bajo.
+			--Cloud financial management
+			--Measure efficiciency
+			--Analyze and attribute expenditures
 		-Sostenibilidad-Sustainability
 			es la capacidad de mejorar continuamente los impactos de la sostenibilidad mediante la reducción del consumo de energía y el aumento de la eficiencia en todos los componentes de una carga de trabajo, maximizando los beneficios de los recursos proporcionados y minimizando los recursos totales requeridos.
+			--Aspire for maximum utilization
+			--Adopt more efficiente hardware
+			--Used managed services
 			
 	Seis ventajas de la computación en la nube:
 		-Pasar de gasto inicial a gasto variable.
@@ -1126,3 +1232,117 @@ El examen AWS Certified Cloud Practitioner incluye cuatro dominios:
 	2. Seguridad y conformidad
 	3. Tecnología
 	4. Facturación y precios
+	
+1- AWS Cost Explorer  
+2- Amazon S3 
+3- AWS Auto Scaling 
+4- The Customer 
+5- AWS Lambda
+6- Site-to-Site VPN
+7- 12-month trial with access to specific services under usage limits. 
+8- Provide compliance reports and certifications
+9- AWS Shield 
+10-  AWS CloudTrail  X
+
+11- AWS Fargate 
+12- On-Demand Instances  X
+13- Amazon Athena 
+14- AWS CloudTrail   X
+15- Managing billing and applying policies across multiple AWS accounts 
+16- Attach an IAM role to the EC2 instance
+17- Enterprise
+18- Amazon EBS   X
+19- Object-based storage X
+20-  AWS IAM 
+	
+21- AWS WAF   X
+22- AWS CloudFormation
+23- Amazon Route 53 
+24- Cache content at edge locations to reduce latency
+25- Enforce permission boundaries across accounts 
+26- Amazon DynamoDB 
+27- Amazon CloudWatch
+28- Scalable data warehouse 
+29- Application Load Balancer 
+30- AWS Systems Manager X
+
+31- Amazon Aurora 
+32- Setting permissions and access control for AWS services 
+33- Reduced need for operational overhead
+34- AWS Budgets  x
+35- AWS Glue   x
+36- Business
+37- Route Table x
+38- Amazon Inspector x
+39- Amazon Route 53 x
+40- AWS Lambda 
+
+41- Provide a dedicated private network connection between AWS and on-premises data centers 
+42- Amazon S3 Glacier Deep Archive 
+43- Amazon Neptune  x
+44- AWS Trusted Advisor 
+45- Amazon EventBridge
+46- ViewBilling
+47- AWS Secrets Manager 
+48- Amazon WorkSpaces
+49- AWS Pricing Calculator 
+50- Amazon EKS
+
+51- AWS CloudTrail  x
+52- Amazon S3
+53- Add a second layer of login security
+54- Amazon EC2  x  
+55- Private IP 
+56- Amazon S3 
+57- Amazon SageMaker 
+58- Amazon Inspector  x
+59- S3 Access Analyzer x
+60-  Amazon Route 53
+
+61- Amazon Lex 
+62- Amazon ElastiCache 
+63- Amazon Certificate Manager (ACM) 
+64-  AWS Cost Explorer 
+65- AWS Batch 
+66- AWS CloudFormation
+67- AWS Transit Gateway   x
+68- AWS Skill Builder  
+69- KMS rotation   x
+70- Enterprise
+
+71- Amazon EFS
+72- AWS Shield   x
+73- AWS IAM x
+74-  Reserved for long-term use with predictable pricing  x
+75- AWS Systems Manager  x
+76- AWS IoT Core 
+77- Monitor and store log data from applications and AWS resources
+78-  Private and blocked from public access
+79- AWS CodeCommit
+80- Service Control Policies (SCPs) 
+
+81- Amazon Kinesis
+82- Server-Side Encryption
+83-  S3 Standard 
+84- Amazon API Gateway
+85- Automatic scaling of compute resources based on demand
+86- AWS Fargate   x
+87- AWS CloudTrail  x
+88-  Amazon Neptune
+89-  VPC Peering   x
+90- AWS X-Ray
+
+91- Amazon VPC
+92- Optimizes costs by moving data between access tiers based on usage 
+93- AWS Snowball 
+94- AWS WAF  X
+95-  AWS Elastic Beanstalk
+96- Amazon ECS with EC2   X
+97- AWS CodePipeline
+98- AWS Budgets 
+99-  Generate a pre-signed URL 
+100- AWS Shield
+
+
+
+
