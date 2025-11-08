@@ -1,40 +1,42 @@
-AWS Certified Cloud Practitioner (CLF-C02) ->  https://aws.amazon.com/certification/certified-cloud-practitioner/
+# 🚀 AWS Certified Cloud Practitioner (CLF-C02) ->  https://aws.amazon.com/certification/certified-cloud-practitioner/
 
-Glosario ->   https://docs.aws.amazon.com/es_es/glossary/latest/reference/glos-chap.html
+Este repositorio contiene una colección de ejercicios prácticos para aprender y dominar los servicios de Amazon Web Services.
 
-Overview of Amazon Web Services -> https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+# 📖 Glosario ->   https://docs.aws.amazon.com/es_es/glossary/latest/reference/glos-chap.html
 
-	Fundamentos de la nube de AWS para profesionales (Español de España) | AWS Cloud Practitioner Essentials (Spanish from Spain)
+# 📖 Overview of Amazon Web Services -> https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+
+# 📖 Fundamentos de la nube de AWS para profesionales (Español de España) | AWS Cloud Practitioner Essentials (Spanish from Spain)
 	
-	What is cloud computing?
+## 📦 What is cloud computing?
 	
-Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).
+### Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).
 
-	Benefits of cloud computing
-	--Agility
-	--Elasticity
-	--Cost savings
-	--Deploy globally in minutes
+## Benefits of cloud computing
+* Agility
+* Elasticity
+* Cost savings
+* Deploy globally in minutes
 	
-	Types of cloud computing
+## Types of cloud computing
 
 The three main types of cloud computing include Infrastructure as a Service, Platform as a Service, and Software as a Service. Each type of cloud computing provides different levels of control, flexibility, and management so that you can select the right set of services for your needs.
 
-	Infrastructure as a Service (IaaS): contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT resources. It is most similar to the existing IT resources with which many IT departments and developers are familiar. 
-
-	Platform as a Service (PaaS): removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus on the deployment and management of your applications. This helps you be more efficient as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.
+* Infrastructure as a Service (IaaS)
+  contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT resources. It is most similar to the existing IT resources with which many IT departments and developers are familiar.
+  
+* Platform as a Service (PaaS)
+  removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus on the deployment and management of your applications. This helps you be more efficient as you don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.
 	
-	Software as a Service (SaaS): provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS are referring to end-user applications (such as web-based email). With a SaaS offering, you don’t have to think about how the service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular software.
-	
-	Infraestructura como código (IaaC)
+* Software as a Service (SaaS)
+  provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS are referring to end-user applications (such as web-based email). With a SaaS offering, you don’t have to think about how the service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular software.
 
-Serverless
-	"Serverless" es un nuevo paradigma en el que los desarrolladores ya no tienen que gestionar servidores,
-	El término "sin servidor" significa que el código se ejecuta en servidores, pero no es necesario aprovisionar ni administrar dichos servidores. 
-		
-Como interactuar con AWS
-	1. La consola de administración de AWS es una interfaz basada en web para acceder a los servicios de AWS y administrarlos.
-	2. AWS CLI -> AWS Command Line Interface. AWS CLI te permite controlar varios servicios de AWS directamente desde la línea de comandos en una herramienta.
+## Serverless
+	es un nuevo paradigma en el que los desarrolladores ya no tienen que gestionar servidores; el término "sin servidor" significa que el código se ejecuta en servidores, pero no es necesario aprovisionar ni administrar dichos servidores. 
+
+## Como interactuar con AWS
+1 La consola de administración de AWS es una interfaz basada en web para acceder a los servicios de AWS y administrarlos.
+2 AWS CLI -> AWS Command Line Interface. AWS CLI te permite controlar varios servicios de AWS directamente desde la línea de comandos en una herramienta.
 	3. AWS SDK -> kits de desarrollo de software. Los SDK facilitan el uso de los servicios de AWS a través de una API diseñada para tu lenguaje de programación o tu plataforma.
 
 Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS     https://aws.amazon.com/ec2/faqs/
