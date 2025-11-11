@@ -34,12 +34,13 @@ The three main types of cloud computing include Infrastructure as a Service, Pla
 ## Serverless
 	es un nuevo paradigma en el que los desarrolladores ya no tienen que gestionar servidores; el término "sin servidor" significa que el código se ejecuta en servidores, pero no es necesario aprovisionar ni administrar dichos servidores. 
 
-## Como interactuar con AWS
-1 La consola de administración de AWS es una interfaz basada en web para acceder a los servicios de AWS y administrarlos.
-2 AWS CLI -> AWS Command Line Interface. AWS CLI te permite controlar varios servicios de AWS directamente desde la línea de comandos en una herramienta.
-	3. AWS SDK -> kits de desarrollo de software. Los SDK facilitan el uso de los servicios de AWS a través de una API diseñada para tu lenguaje de programación o tu plataforma.
+## 📦 Como interactuar con AWS
 
-Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS     https://aws.amazon.com/ec2/faqs/
+1. La consola de administración de AWS es una interfaz basada en web para acceder a los servicios de AWS y administrarlos.
+2 AWS CLI -> AWS Command Line Interface. AWS CLI te permite controlar varios servicios de AWS directamente desde la línea de comandos en una herramienta.
+3. AWS SDK -> kits de desarrollo de software. Los SDK facilitan el uso de los servicios de AWS a través de una API diseñada para tu lenguaje de programación o tu plataforma.
+
+## 📦 Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS     https://aws.amazon.com/ec2/faqs/
 	Is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale computing easier for developers.
 	Con una instancia de Amazon EC2 puedes utilizar un servidor virtual para ejecutar aplicaciones en la nube de AWS.
 	
@@ -89,12 +90,12 @@ Amazon EC2 -> Amazon Elastic Compute Cloud = IaaS     https://aws.amazon.com/ec2
 			Sin compromiso de tiempo
 		Reserved Instance Marketplace
 		
-Amazon EBS -> Almacenes de instancias y Amazon Elastic Block Store
+## 📦 Amazon EBS -> Almacenes de instancias y Amazon Elastic Block Store
 
 	Almacenes de instancias (Temporal)
 		Los volúmenes de almacenamiento en el nivel de bloque se comportan como discos duros físicos, proporciona almacenamiento temporal en el nivel de bloque para una instancia de Amazon EC2. Son unidades de red con un rendimiento bueno pero "limitado" pierden su almacenamiento si se detienen
 		
-	Amazon Elastic Block Store (Amazon EBS)
+## 📦 Amazon Elastic Block Store (Amazon EBS)
 		Es un servicio que proporciona volúmenes de almacenamiento en el nivel de bloque que puedes usar con instancias de Amazon EC2.
 		Un volumen EBS, Es una unidad de red que puede adjuntar instancias mientras se ejecutan
 		Permite que las instancias persistan los datos, incluso después de su finalización
@@ -112,7 +113,7 @@ Amazon EBS -> Almacenes de instancias y Amazon Elastic Block Store
 			Configura reglas para retener los snaphost eliminados para poder recuperarlos después de un borrado accidental
 			Se puede especificar la retención por tiempo, de 1 día a 1 año
 			
-Amazon Machine Image -> AMI
+## 📦 Amazon Machine Image -> AMI
 	Las AMI son una personalización de una instancia EC2
 		-Se añade tu propio software, configufación, sistema operativo, monitorización, etc
 		-Tiempo de arranque/configuración más rápido porque todo el software está preempaquetado
