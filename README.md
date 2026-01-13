@@ -513,14 +513,14 @@ The three main types of cloud computing include Infrastructure as a Service, Pla
 		Latency Routing Policy
 		Failover Routing Policy, Recuperación de desastres, tiene control de salud
 					
-S3 Transfer Acceleration
+## 📦 S3 Transfer Acceleration
 	Aumenta la velocidad de transferencia transfiriendo el archivo a una ubicación edge de AWS que reenviará los datos al bucket de S3 en la región de destino
 	
-AWS Global Accelerator
+## 📦 AWS Global Accelerator
 	Mejora la disponibilidad y el rendimiento global de la aplicación utilizando la red global de AWS
 	Aprovecha la red interna de AWS para optimizar la ruta hacia tu aplicación (60% de mejora)
 	
-	CloudFront vrs AWS Global Accelerator
+## 📦 CloudFront vrs AWS Global Accelerator
 		Ambos utilizan la red global de AWS y sus ubicaciones de borde en todo el mundo
 		Ambos servicios se integran con AWS Shield para la protección DDoS
 		
@@ -532,30 +532,30 @@ AWS Global Accelerator
 			Mejora el rendimiento de una amplia gama de aplicaciones sobre TCP y UDP
 			Bueno para casos de uso de HTTP que requieren direcciones IP estáticas y que requieran conmutación por error regional dterminista y rápida
 			
-AWS Outposts	https://aws.amazon.com/outposts
+## 📦 AWS Outposts	https://aws.amazon.com/outposts
 	--Run AWS infrastructure and services on premises for a truly consistent hybrid experience
 	Ampliar la infraestructura y los servicios de AWS a diferentes ubicaciones, incluido tu centro de datos en las instalaciones.
 	Cloud híbrido: empresas que mantienen una infraestructura local junto a una infraestructura en la nube
-	Los Outposts de AWS son racks de servidores que ofrecen la misma infraestructura, servicios, API y herramientas de AWS para crear tus propias aplicaciiones en las instalaciones al igual que en el Cloud
+	Los Outposts de AWS son racks de servidores que ofrecen la misma infraestructura, servicios, API y herramientas de AWS para crear tus propias aplicaciones en las instalaciones al igual que en el Cloud
 	Ventajas
 		Acceso de baja latencia a los sistemas locales
 		Procesamiento local de datos
 		Residencia de datos
 		Migración más fácil de onpremises a el Cloud
 		
-AWS WaveLenght	https://aws.amazon.com/wavelength/
+## 📦 AWS WaveLenght	https://aws.amazon.com/wavelength/
 	--Run applications using AWS Infrastructure and services in AWS telco partners’ data centers to meet your low latency, data residency, and resiliency needs.
 	WaveLenght Zones son despliegues de infraestructura incrustados en los centros de datos de los proveedores de telecomunicaciones de las redes 5G
 	Lleva los servicios de AWS al límite de las redes 5G
 	El tráfico no sale de la red del proveedor de servicios
 	
-AWS Local Zones	https://aws.amazon.com/about-aws/global-infrastructure/localzones/
+## 📦 AWS Local Zones	https://aws.amazon.com/about-aws/global-infrastructure/localzones/
 	--Run applications on AWS infrastructure closer to your end users and workloads
 	Coloca la informática, el almacenamiento, la base de datos y otros servicios de AWS más cerca de los usuarios finales para ejecutar aplicaciones sensibles a latencia	
 
-Redes:
+# 📖  Redes:
 
-Amazon VPC -> Amazon Virtual Private Cloud 
+## 📦 Amazon VPC -> Amazon Virtual Private Cloud 
 	--Define and launch AWS resources in a logically isolated virtual network
 	Amazon VPC permite aprovisionar una sección aislada de AWS Cloud. En esta sección aislada, puedes iniciar recursos en una red virtual definida. Dentro de una nube virtual privada (VPC), puedes organizar los recursos en subredes. Una subred es una sección de una VPC que puede contener recursos como las instancias de Amazon EC2
 	
@@ -662,9 +662,9 @@ Amazon Route 53
 	
 	Sistema de nombres de dominio DNS
 	
-Almacenamiento y base de datos:
+# 📖 Almacenamiento y base de datos
 	
-Amazon S3 -> Amazon Simple Storage Service.  https://aws.amazon.com/s3/
+## 📦 Amazon S3 -> Amazon Simple Storage Service.  https://aws.amazon.com/s3/
 	--Object storage built to retrieve any amount of data from anywhere
 	Ventaja Sin servidor 
 	Es un servicio que proporciona almacenamiento en el nivel de objeto. Amazon S3 almacena datos como objetos en buckets.
@@ -694,7 +694,7 @@ Amazon S3 -> Amazon Simple Storage Service.  https://aws.amazon.com/s3/
 		-Amazon S3 Glacier Deep Archive admite la conservación a largo plazo y la preservación digital de datos a los que se puede acceder una o dos veces al año. La clase de almacenamiento de objetos más barata, ideal para archivar
 		-Amazon S3 Outposts, Ofrece almacenamiento de objetos a su entorno local de AWS Outposts.
 	
-Amazon RDS -> Amazon Relational Database Service   https://aws.amazon.com/rds/
+## 📦 Amazon RDS -> Amazon Relational Database Service   https://aws.amazon.com/rds/
 	--Easy to manage relational databases optimized for total cost of ownership
 	Es un servicio que permite ejecutar bases de datos relacionales en AWS Cloud.
 	
@@ -707,26 +707,34 @@ Amazon RDS -> Amazon Relational Database Service   https://aws.amazon.com/rds/
 			-Oracle Database
 			-Microsoft SQL Server
 			
-Amazon DynamoDB - https://aws.amazon.com/dynamodb/
+## 📦 Amazon DynamoDB - https://aws.amazon.com/dynamodb/
 	--Serverless, fully managed, distributed NoSQL database with single-digit millisecond performance at any scale
 	Es un servicio de base de datos clave-valor. Ofrece un rendimiento de milisegundos de un solo dígito a cualquier escala
 	Bases de datos no relacionales, en una base de datos no relacional, se crean tablas. Una tabla es un lugar en el que se pueden almacenar y consultar datos
 	
-Amazon Redshift - https://aws.amazon.com/redshift/
+## 📦 Amazon Redshift - Schema-on-write (lo defines al guardar)  https://aws.amazon.com/redshift/
 	--Deliver unmatched price-performance at scale with SQL for your data lakehouse
 	Es un servicio de almacenamiento de datos que puedes usar para analizar big data - Datawarehouse
 	
-Amazon DMS -> AWS Database Migration Service - https://aws.amazon.com/dms/
+## 📦 Amazon DMS -> AWS Database Migration Service - https://aws.amazon.com/dms/
 	Permite migrar bases de datos relacionales, bases de datos no relacionales y otros tipos de almacenes de datos.
 	
-Storage:
-AWS Backup - https://aws.amazon.com/es/backup/
+## 📦 Storage
+	AWS Backup - https://aws.amazon.com/es/backup/
 	--Administre y automatice la protección de los datos de manera centralizada
+
+## 📦 Amazon Athena: El Query Engine Schema-on-read (lo defines al consultar)
+	Athena es un servicio de consultas interactivo que permite analizar datos directamente en Amazon S3 utilizando SQL estándar
+
+## 📦 AWS Lake Formation
+	Un servicio que ayuda a configurar, asegurar y gestionar un Data Lake en días en lugar de meses. Centraliza los permisos de quién puede ver qué columna en Athena.
+
+## 📦 Amazon EMR (Elastic MapReduce)
+	Si Athena es para SQL simple, EMR es para Big Data pesado. Utiliza frameworks como Apache Spark o Hadoop para procesar cantidades masivas de datos.
 	
-AWS Elastic Disaster Recovery
-	--
+## 📦 AWS Elastic Disaster Recovery
 	
-Servicios de bases de datos adicionales
+## 📦 Servicios de bases de datos adicionales
 	Amazon DocumentDB Es un servicio de base de datos de documentos compatible con cargas de trabajo de MongoDB. (MongoDB es un programa de base de datos de documentos).
 	Amazon Neptune Es un servicio de base de datos de grafos.
 	Amazon QLDB -> Amazon Quantum Ledger Database es un servicio de base de datos de libro mayor. 
@@ -734,17 +742,18 @@ Servicios de bases de datos adicionales
 	Amazon ElastiCache es un servicio que añade capas de almacenamiento sobre las bases de datos para ayudar a mejorar los tiempos de lectura de las solicitudes comunes. Es compatible con dos tipos de almacenes de datos: Redis y Memcached
 	Amazon DAX -> Amazon DynamoDB Accelerator es una caché en memoria para DynamoDB
 	
-Seguridad:
-	Modelo de responsabilidad compartida de AWS  https://aws.amazon.com/compliance/shared-responsibility-model/
+# 📖 Seguridad
+	
+## 📦 Modelo de responsabilidad compartida de AWS  https://aws.amazon.com/compliance/shared-responsibility-model/
 		AWS es responsable de algunas piezas del entorno y tú (el cliente) de otras. Este concepto se conoce como modelo de responsabilidad compartida.
 	
-	AWS: Seguridad de la nube
+* AWS: Seguridad de la nube
 		AWS es responsable de la seguridad de la nube.
 		
-	Clientes: Seguridad en la nube
+* Clientes: Seguridad en la nube
 		Los clientes son responsables de la seguridad de todo lo que crean y ponen en la nube de AWS.
 		
-Amazon IAM -> AWS Identity and Access Management   https://aws.amazon.com/iam/
+## 📦 Amazon IAM -> AWS Identity and Access Management   https://aws.amazon.com/iam/
 	Permite administrar el acceso a los recursos y servicios de AWS de manera segura. 
 	
 	Funciones de IAM, que se analizan detalladamente en esta lección:
@@ -780,7 +789,7 @@ Amazon IAM -> AWS Identity and Access Management   https://aws.amazon.com/iam/
 			Muestra los permisos de servicio concedidos a un usuario y cuando se accedió a esos  servicios por última vez
 			
 		
-AWS Organizations
+## 📦 AWS Organizations
 	Para unificar y administrar varias cuentas de AWS en una ubicación central.
 	
 	Ventajas:
@@ -792,11 +801,10 @@ AWS Organizations
 	Unidades organizativas UO
 		En AWS Organizations, puedes agrupar las cuentas en unidades organizativas para facilitar la administración de cuentas con requisitos empresariales o de seguridad similares.		
 	
-Conformidad
-	Centro de Confirmidad de AWS
+## 📖 Conformidad - Centro de Confirmidad de AWS
 		Contiene recursos que te pueden ayudar a obtener más información sobre la conformidad de AWS. 
 		
-	AWS Artifact 
+## 📦 AWS Artifact 
 		es un servicio que proporciona acceso bajo demanda a los informes de seguridad y conformidad de AWS y a determinados acuerdos en línea. 
 		Según el sector de tu empresa, es posible que debas respetar estándares específicos. Una auditoría o inspección garantizará que la empresa haya cumplido esos estándares.
 		
@@ -804,7 +812,7 @@ Conformidad
 			-AWS Artifact Agreements: proporciona acceso a los documentos de seguridad y conformidad de AWS, como las certificaciones ISO de AWS, los informes del sector de pagos con tarjeta (PCI) y los informes de control de organización de servicios (SOC).   y
 			-AWS Artifact Reports: AWS Artifact Reports proporciona informes de conformidad de auditores de terceros. Estos auditores han probado y verificado que AWS cumple una serie de estándares y regulaciones de seguridad globales, regionales y específicas del sector.
 		
-	AWS Shield
+## 📦 AWS Shield
 		Es un servicio que protege las aplicaciones contra ataques DDoS Distributed Denial-of-Service (ataque de denegación de servicio) 
 		Ofrece dos niveles de protección: 
 			-Estándar protege automáticamente a todos los clientes de AWS sin coste alguno y
@@ -816,7 +824,7 @@ Conformidad
 			Protección de la disponibilidad mediante una red de borde global
 			Combinado con AWS Shield, proporciona mitigación de ataques en el borde
 	
-	AWS Web Application Firewall WAF
+## 📦 AWS Web Application Firewall WAF
 		Es un firewall de aplicaciones web que permite supervisar las solicitudes de red que llegan a tus aplicaciones web.
 		AWS WAF trabaja junto con Amazon CloudFront y una instancia de Application Load Balancer.
 		AWS WAF funciona de forma similar a ACL para bloquear o permitir el tráfico. No obstante, lo hace mediante una lista de control de acceso (ACL) web para proteger tus recursos de AWS. 
@@ -826,11 +834,11 @@ Conformidad
 		Define la ACL
 		Protege de los ataques más comunes: inyección SQL y Cross-Site Scripting XSS
 		
-	AWS Network Firewall
+## 📦 AWS Network Firewall
 		Protege toda la VPC
 		Protección de capa 3 a 7
 		
-	AWS KMS -> AWS Key Management Service
+## 📦 AWS KMS -> AWS Key Management Service
 		permite realizar operaciones de cifrado mediante el uso de claves criptográficas
 		AWS gestiona las claves de cifrado por nosotros
 		Está activado automáticamente para los siguientes servicios
@@ -839,22 +847,22 @@ Conformidad
 			Storage Gateway
 		Para demás servicios de debe de activar manual
 		
-	AWS CloudHSM
+## 📦 AWS CloudHSM
 		Provee hardware de encriptación
 		HSM = Módulo de Seguridad de Hardware
 		Tipos de Customer Master Keys: CMK
 		
-	AWS Certificate Manager ACM
+## 📦 AWS Certificate Manager ACM
 		Te permite aprovisionar, gestionar y desplegar fácilmente los certificados SSL/TLS
 		Se utilizan para proporcionar encriptación en vuelo para los sitios web (HTTPS)
 		
-	AWS Secrets Manager
+## 📦 AWS Secrets Manager
 		Capacidad para forzar la rotación de secretos cada X días
 		Integración con Amazon RDS
 		los Secretos se incriptan mediante KMS
 		Pensado principalmente para la integración con RDS
 		
-	Amazon GuardDuty
+## 📦 Amazon GuardDuty
 		Es un servicio que proporciona detección inteligente de amenazas para tu infraestructura y recursos de AWS.
 		Utiliza algoritmos de Machine Learning, detección de anomalías y datos de terceros
 		Incluye
@@ -864,7 +872,7 @@ Conformidad
 		Se puede configurar reglas de EventBridge de CloudWatch
 		Puede proteger contra ataques de criptomonedas
 		
-	Amazon Inspector
+## 📦 Amazon Inspector
 		lleva a cabo evaluaciones de seguridad automatizadas.
 		Para Instancias EC2, aprovechando el agente AWS Agent Manager SSM
 		Para imágenes de contenedor enviadas a Amazon ECR
@@ -872,7 +880,7 @@ Conformidad
 		Que evalúa Amazon Inspector?
 			Escaneo continuo de la infraestructura, sólo cuando sea necesario
 		
-	AWS Config
+## 📦 AWS Config
 		Ayuda a auditar y registrar la normativa de tus recursos de AWS
 		Ayuda a registrar las configuraciones y los cambios a lo largo del tiempo
 		Posibilidad de almacenar los datos de configuración en S3 (analizados por Athena)
@@ -882,18 +890,18 @@ Conformidad
 			Cómo ha cmabiado la configuración de mi ALB  con el tiempo?
 		Es un servicio por región
 		
-	AWS Macie
+## 📦 AWS Macie
 		Es un servicio de seguridad y privacidad de datos totalmente gestionado que utiliza Machine learning y la concordancia de patrones para descubrir y proteger nuestros datos sensibles en AWS
 		Ayuda a identificar y alertar sobre datos sensibles, como por ejemplo la información personal identificable PII.
 		
-	AWS Segurity Hub
+## 📦 AWS Segurity Hub
 		Es una herramienta de seguridad central para gestionar la seguridad en varias cuentas de Amazon y de esta forma automatizar las comprobaciones de seguridad.
 		
-	AWS Detective
+## 📦 AWS Detective
 		Analiza, investiga y también identifica de forma rápida la causa raíz de los problemas de seguridad o de las actividades sospechosas mediante machine learning y el uso de grafos.		
 		Recoge y procesa automáticamente los eventos de logs de flujo de la VPC de CloudTrail de GuardDuty y crea una vista totalmente unificada.
 		
-	AWS Abuse
+## 📦 AWS Abuse
 		Cada vez que tú sospeches de que los recursos de AWS se utilicen con fines abusivos o ilegales, debes informar de esa sospecha y ahora entenderás por qué. 
 		En primer lugar, hay que entender que son aquellos fines abusivos o prohibidos:
 			Spam desde una dirección propiedad de AWS
@@ -903,7 +911,7 @@ Conformidad
 			Intentar alojar contenido censurable o con derechos de autor en servicios de AWS
 			Distribuir malware
 	
-	Privilegios del usuario root del usuario raíz.
+## 📦 Privilegios del usuario root del usuario raíz.
 		Usuario propietario de la cuenta
 		Acceso completo a todos los servicios de las cuentas
 		Las acciones que solo puede realizar el usuario root son las siguientes:
@@ -914,7 +922,7 @@ Conformidad
 			Configurar un bucket de Amazon S3 para habilitar lo que es el MFA
 			Tiene la posibilidad de editar o eliminar una política de bucket de Amazon S3 que incluya lo que es un ID de VPC o un ID de inputs de VPC no válido.
 			
-	AWS IAM Access Analyzer -> Analizador de Acceso
+## 📦 AWS IAM Access Analyzer -> Analizador de Acceso
 		Es una característica de IAM que ayuda a los administradores y propietarios de recursos a descubrir y revisar los permisos de sus recursos en AWS.
 		Es un servicio que averigua qué recursos se comparten externamente. Por ejemplo, buckets, S3, roles, IAM, claves, kms, funciones Lambda y capas, colas, SQS o incluso Secrets Manager.
 		Define zona de confianza: Cuenta de AWS o AWS Organization
