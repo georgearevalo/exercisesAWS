@@ -131,12 +131,12 @@ The three main types of cloud computing include Infrastructure as a Service, Pla
 		-Lanzar instancias desde otras AMIs
 		
 	
-EC2 Image Builder
+## 📦 EC2 Image Builder
 	Se utiliza para automatizar la creación de máquinas virtuales o imágenes de contenedores
 	Automatizar la creación, mantener, validar y probar las AMIs de EC2
 	
 		
-EC2 Instance Store
+## 📦 EC2 Instance Store
 	Si se necesita un disco de hardware de alto rendimiento, se utiliza EC2 Instance Store
 	-Mejor rendimiento de E/S
 	-Los almacenes de instancias EC2 pierden su almacenamiento si se detienen (son efímeros)
@@ -144,7 +144,7 @@ EC2 Instance Store
 	-Riesgo de pérdida de datos de el hardware falla
 	-Las copias de seguridad y la replicación son responsabilidad de uno
 					
-Amazon EFS -> Amazon Elastic File System
+## 📦 Amazon EFS -> Amazon Elastic File System
 	Es un sistema de archivos escalable que se usa con los servicios en la nube de AWS y los recursos en las instalaciones. 
 	
 	Amazon EFS es un servicio regional. Almacena datos transversalmente en varias zonas de disponibilidad. 
@@ -153,46 +153,46 @@ Amazon EFS -> Amazon Elastic File System
 		Con EBS se puede utilizar en otra zona de disponibilidad creando una EBS Snapshot y luego restaurarla y con EFS se puede usar en varias zonas de disponibilidad a la vez, utilizando EFS Mount Target
 		
 	EFS Infrecuent Access (EFS-IA)
-		-Clase de almacenamiento con costes optimizados para los archivos a los que no se accede a diario
-		-Hasta un 92% menos de coste en comparación con EFS Standard
-		-EFS moverá automáticamente tus archivos a EFS-IA basándose en la última vez que se accedió a ellos
+		* Clase de almacenamiento con costes optimizados para los archivos a los que no se accede a diario
+		* Hasta un 92% menos de coste en comparación con EFS Standard
+		* EFS moverá automáticamente tus archivos a EFS-IA basándose en la última vez que se accedió a ellos
 		
 3 tipos de almacenamientos
-	-EBS
-	-Almacenamiento de instancias EC2
-	-EFS
+	* EBS
+	* Almacenamiento de instancias EC2
+	* EFS
 	
-Amazon FSx
+## 📦 Amazon FSx
 	Lanzar sistemas de archivos de alto rendimiento de terceros en AWS
 	Servicio totalmente gestionado
 	
-	-Amazon FSx para Windows File Server
+	* Amazon FSx para Windows File Server
 		Un sistema de archivos compartido nativo de Windows totalmente gestionado, altamente fiable y escalable
 		Contruido sobre Windows File Server
-	-Amazon FSx Lustre
+	* Amazon FSx Lustre
 		Un almacenamiento de archivos totalmente gestionado, de alto rendimiento y escalable para High Performance Computing (HPC)
 		Nombre de Lustre se deriva de Linux y Cluster
 			
-Escalabilidad, Elasticidad y alta disponibilidad
-	Escalabilidad significa que una aplicación/sistema puede manejar mayores cargar adaptándose.
+## 📦 Escalabilidad, Elasticidad y alta disponibilidad
+	* Escalabilidad significa que una aplicación/sistema puede manejar mayores cargas adaptándose.
 	Dos tipos  vertical (aumentar tamaño de instancia) scale up y horizontal (elasticidad) aumentar número de instancias scale out
 	
-	Escalado horizontal
+	* Escalado horizontal
 		Auto Scaling Group
 		Load Balancer
 		
-	Alta disponibilidad
+	* Alta disponibilidad
 		Va de la mano de escabilidad horizontal, sistemas en al menos 2 zonas de disponibilidad
 		Auto Scaling Group multi AZ
 		Load Balancer multi AZ
 		
-	Elasticidad
+	* Elasticidad
 		"Autoescalado" en función de la carga. Esto es amigable con el Cloud: Pago por uso, adecuación a la demanda, optimización de costes
 		
-	Agilidad
+	* Agilidad
 		Poder tener los nuevos recursos de IT a un clic de distancia	
 		
-Amazon ELB -> Elastic Load Balancing (Equilibrador de carga): balanceador de carga que direcciona tráfico  https://aws.amazon.com/es/elasticloadbalancing/
+## 📦 Amazon ELB -> Elastic Load Balancing (Equilibrador de carga): balanceador de carga que direcciona tráfico  https://aws.amazon.com/es/elasticloadbalancing/
 	es el servicio de AWS que distribuye automáticamente el tráfico entrante de la aplicación entre varios recursos como, por ejemplo, instancias de Amazon EC2. 
 	
 	Load Balancers  son servidores que reenvían el tráfico de Internet a múltiples servidores (Instancias EC2) en sentido descendente
@@ -204,30 +204,30 @@ Amazon ELB -> Elastic Load Balancing (Equilibrador de carga): balanceador de car
 	
 	Contribuye a agregar una arquitectura desacoplada
 	
-Arquitectura de acoplamiento fuerte
+* Arquitectura de acoplamiento fuerte
 	Si un componente falla, falla todo
-Arquitectura de acoplamiento debil
+* Arquitectura de acoplamiento debil
 	Si un componente falla, se desacopla y sistema sigue funcionando sin problema
 	
 	4 tipos ELB:
-	Classic (Antiguo)
+	* Classic (Antiguo)
 	
-	Application Load Balancer
+	* Application Load Balancer
 		Protocolos HTTP / HTTPS / gRPC (Capa 7)
 		Funciones de enrutamiento HTTP
 		DNS estático (URL)
 		
-	Network Load Balancer
+	* Network Load Balancer
 		Protocolos TCP / UDP
 		Alto rendimiento
 		IP estática a través de IP elástica
 		
-	Gateway Load Balancer
+	* Gateway Load Balancer
 		Protocolo GENEVE en paquetes IP (Capa 3)
 		Enrutar el tráfico a los firewalls
 		Detección de intrusos
 		
-	ASG -> Auto Scaling Group, en función de demanda y se integra con ELB  https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html
+	* ASG -> Auto Scaling Group, en función de demanda y se integra con ELB  https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html
 		Objetivo
 			-Reducir (añadir instancias de EC2) para adaptarse a un aumento de la carga
 			-Aumentar (eliminar instancias de EC2) para coincida con una disminución de la carga
@@ -244,7 +244,7 @@ Arquitectura de acoplamiento debil
 			
 	
 	
-Amazon SQS -> Amazon Simple Queue Service (SQS)   https://aws.amazon.com/sqs/
+## 📦 Amazon SQS -> Amazon Simple Queue Service (SQS)   https://aws.amazon.com/sqs/
 	SQS es un servicio de cola de mensajes. Permite enviar, almacenar y recibir mensajes entre componentes de software a cualquier volumen.
 	Escala desde 1 mensaje por segundo hasta 10000 por segundo
 	No hay límite en el número de mensajes que puede haber en la cola
@@ -253,11 +253,11 @@ Amazon SQS -> Amazon Simple Queue Service (SQS)   https://aws.amazon.com/sqs/
 		Standard
 		FIFO
 
-Amazon SNS -> Amazon Simple Notification Service (SNS)		https://aws.amazon.com/sns/
+## 📦 Amazon SNS -> Amazon Simple Notification Service (SNS)		https://aws.amazon.com/sns/
 	Es un servicio de mensajería pub/sub de alta disponibilidad, duradero, seguro y totalmente gestionado que permite desaclopar servicios, sistemas distribuidos y aplicaciiones sin servidor. Utiliza un sistema basado en push.
 	Es similar a Amazon SQS porque se utiliza para enviar mensajes a los servicios, pero también puede enviar notificaciones a usuarios finales.
 		
-Amanzon Kinesis		https://aws.amazon.com/kinesis/
+## 📦 Amanzon Kinesis		https://aws.amazon.com/kinesis/
 	Streaming de big data en tiempo real
 	Servicio gestionado para recopilar, procesar y analizar datos de streaming en tiempo real a cualquier  escala
 	Kinesis Data Streams: streaming de baja latencia para ingerir datos  a escala desde cientos de miles de fuentes
@@ -265,23 +265,23 @@ Amanzon Kinesis		https://aws.amazon.com/kinesis/
 	Kinesis Data Analystics: realiza análisis en tiempo real de los flujos mediante SQL
 	Kinesis Data Streams: supervisa los flujos de vídeo en tiempo real para la analítica o el ML
 	
-Amazon MQ
+## 📦 Amazon MQ
 	Servicio gestionado de intermediación/broker de mensajes para RabbitMQ, ActiveMQ
 	Tiene la función tanto de SQS como la de tema de SNS
 
-Docker		https://aws.amazon.com/docker/
+## 📦 Docker		https://aws.amazon.com/docker/
 	Se puede definir como una plataforma de desarrollo de software para desplegar aplicaciones.
 	Las aplicaciones con Docker se empaquetan en lo que se llaman contenedores de software que pueden ejecutarse.
 	Funciona en cualquier lenguaje, sistema operativo o tecnología
 	Docker se puede entender como una especie de tecnología de virtualización, pero no exactamente.
 
-Amazon ECS -> Amazon Elastic Container Service	https://aws.amazon.com/ecs/
+## 📦 Amazon ECS -> Amazon Elastic Container Service	https://aws.amazon.com/ecs/
 	Es un sistema de administración de contenedores altamente escalable y de alto rendimiento que permite ejecutar y escalar aplicaciones en contenedores en AWS. Amazon ECS admite y permite lanzar contenedores de Docker.
 	AWS se encarga de parar o iniciar los contenedores
 	Tiene integraciones con el Application Load Balancer
 	
 	
-Amazon EKS -> Amazon Elastic Kubernetes Service		https://aws.amazon.com/eks/
+## 📦 Amazon EKS -> Amazon Elastic Kubernetes Service		https://aws.amazon.com/eks/
 	Es un servicio completamente administrado que se puede usar para ejecutar Kubernetes en AWS. 
 	Start, run, and scale Kubernetes without thinking about cluster management
 		--Accelerate time to production
@@ -289,19 +289,19 @@ Amazon EKS -> Amazon Elastic Kubernetes Service		https://aws.amazon.com/eks/
 		--Improve performance, availability, and resiliency
 		--Enhance security of your systems
 	
-AWS Fargate		https://aws.amazon.com/fargate/
+## 📦 AWS Fargate		https://aws.amazon.com/fargate/
 	Es un motor de computación sin servidor para contenedores. Funciona tanto con Amazon ECS como con Amazon EKS. 
 	¿Pero cuál es la diferencia?
 		Con Fargate, tú no aprovisionas la infraestructura, no hay instancias EC2 que gestionar. Es mucho, mucho más sencillo. Es una oferta sin servidor.
 		Aquí es donde vas a almacenar tus imágenes de Docker para que luego puedan ser ejecutadas por ECS o Fargate.
 		
-Amazon ECR -> Amazon Elastic Container Registry		https://aws.amazon.com/ecr/
+## 📦 Amazon ECR -> Amazon Elastic Container Registry		https://aws.amazon.com/ecr/
 	Easily store, share, and deploy your container software anywhere.
 	Es un registro privado de Docker en AWS. ¿Por qué? Existe un registro público donde podemos encontrar imágenes de Docker, imágenes como Node, Java, Reddit y muchas otras, que es Docker Hub. No obstante, ese es público.	
 
 	Con Fargate, AWS simplemente ejecutará los contenedores por ti en función de la CPU y RAM que necesites.
 	
-AWS Lambda	https://aws.amazon.com/lambda/
+## 📦 AWS Lambda	https://aws.amazon.com/lambda/
 	Es un servicio que permite ejecutar código sin necesidad de aprovisionar ni administrar servidores. 
 	Se paga por las solicitudes que se realizan de ejecución y por el tiempo de computación.
 	Integrado con todo el conjunto de servicios de AWS
@@ -311,17 +311,17 @@ AWS Lambda	https://aws.amazon.com/lambda/
 		--Increase developer agility
 		--Boost application performance
 	
-AWS API Gateway		https://aws.amazon.com/api-gateway/
+## 📦 AWS API Gateway		https://aws.amazon.com/api-gateway/
 	con API Gateway crear APIS que nos permite hacer llamadas al servicio de Amazon Web Services AWS Lambda
 	Es un servicio totalmente gestionado para que los desarrolladores puedan crear, publicar, mantener, supervisar y asegurar fácilmente las APIs de servicios, y también es escalable
 	
-AWS Batch	https://aws.amazon.com/batch/
+## 📦 AWS Batch	https://aws.amazon.com/batch/
 	El servicio que nos permite realizar procesamiento por lotes, es un servicio totalmente gestionado en cualquier escala con AWS Batch. 
 	Podemos ejecutar eficientemente 100.000 trabajos de computación por lotes en AWS. 
 	Un trabajo por lotes, digámoslo así, es un trabajo con un inicio y un final, en contraposición a uno continuo. Batch. 
 	Lo que hará será lanzar dinámicamente instancias EC22 o instancias spot a AWS Batch proporciona.
 	
-AWS Batch vrs Lambda
+## 📦 AWS Batch vrs Lambda
 	Lambda
 		-Límite de tiempo
 		-Tiempos de ejecución limitado
@@ -332,49 +332,49 @@ AWS Batch vrs Lambda
 		-Depende de EBS / almacén de instancias para el espacio en disco
 		-Depende de EC2 (puede ser gestionado por AWS)
 		
-Amazon Lightsail
+## 📦 Amazon Lightsail
 	Nos puede servir para servidores virtuales, almacenamiento, bases de datos y redes, entre otras cosas.
 	Para personas con poca experiencia en cloud.
 		--Create a website fast
 		--Scale easily
 		--Security and reliability
 	
-AWS Amplify 	https://docs.aws.amazon.com/amplify/
+## 📦 AWS Amplify 	https://docs.aws.amazon.com/amplify/
 	Use AWS Amplify to develop and deploy cloud-powered mobile and web applications. Amplify provides frontend libraries, UI components, and backend building for fullstack applications on AWS. Amplify Hosting provides a continuous delivery and hosting service for fullstack cloud applications.
 	
 	https://main.dld2wjdmztsz3.amplifyapp.com/
 	
-Regions
+## 📦 Regions
 	--AWS has the concept of a Region, which is a physical location around the world where we cluster data centers. We call each group of logical data centers an Availability Zone. Each AWS Region consists of a minimum of three, isolated, and physically separate AZs within a geographic area.
 	--Cada región posee varias AZ separadas y fisícamente aisladas dentro de una región geográfica
 	--Todos los servicios de AWS poseen alta disponibilidad
 	
-Availability Zones AZ
+## 📦 Availability Zones AZ
 	Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region. 
 	AWS crea zonas de disponibilidad AZ para tener alta disponibilidad
 	Se debe de elegir zona según 4 puntos:
-		1. Conformidad con los requisitos y gobernanza de datos, datos deben de estar alojados en ubicación específica?
+		1. Conformidad con los requisitos y gobernanza de datos, datos deben de estar alojados en ubicación específica
 		2. Próximidad a los clientes, lo más cercano posible
 		3. Servicios - Características disponibles en cada región
 		4. Precios, según región puede ser más caro un servicio que en otra región
 
-Content Delivery Network CDN
-	--A content delivery network (CDN) is a network of interconnected servers that speeds up webpage loading for data-heavy applications
-	--Una red de entrega de contenido (CDN) es una red de servidores interconectados que acelera la carga de las páginas web para las aplicaciones que tienen un uso intensivo de datos. CDN puede significar red de entrega de contenido o red de distribución de contenido.	
-	--Ubicaciones periféricas
-	--Why is a CDN important? The primary purpose of a content delivery network (CDN) is to reduce latency, or reduce the delay in communication created by a network's design.
-	--What are the benefits of CDNs?
-		--Reduce page load time
-		--Reduce bandwidth costs
-		--Increase content availability
-		--Improve website security
+## 📦 Content Delivery Network CDN
+	* A content delivery network (CDN) is a network of interconnected servers that speeds up webpage loading for data-heavy applications
+	* Una red de entrega de contenido (CDN) es una red de servidores interconectados que acelera la carga de las páginas web para las aplicaciones que tienen un uso intensivo de datos. CDN puede significar red de entrega de contenido o red de distribución de contenido.	
+	* Ubicaciones periféricas
+	* Why is a CDN important? The primary purpose of a content delivery network (CDN) is to reduce latency, or reduce the delay in communication created by a network's design.
+	* What are the benefits of CDNs?
+		** Reduce page load time
+		** Reduce bandwidth costs
+		** Increase content availability
+		** Improve website security
 		
-AWS CloudFront	https://aws.amazon.com/cloudfront/
-	--Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience.
-		--Reduce latency
-		--Improve security
-		--Cut costs
-		--Customize the code
+## 📦 AWS CloudFront	https://aws.amazon.com/cloudfront/
+	* Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience.
+	* Reduce latency
+	* Improve security
+	* Cut costs
+	* Customize the code
 	Es un servicio de entrega de contenido.
 	Red de entrega de contenido (CDN)
 	Mejora el rendimiento de lectura, el contenido se almacena en caché en edge location
@@ -401,30 +401,30 @@ AWS CloudFront	https://aws.amazon.com/cloudfront/
 			Sólo lectura
 			Ideal para contenidos dinámicos que deben estar disponibles con baja latencia en pocas regiones
 	
-Herramientas de administración - 
+# 📖  Herramientas de administración
 
-AWS CloudFormation -> IaaC	https://aws.amazon.com/cloudformation/
-	--Speed up cloud provisioning with infrastructure as code
+## 📦 AWS CloudFormation -> IaaC	https://aws.amazon.com/cloudformation/
+	* Speed up cloud provisioning with infrastructure as code
 	Con AWS CloudFormation, puedes tratar tu infraestructura como código. Esto significa que puedes crear un entorno escribiendo líneas de código en lugar de usar la consola de administración de AWS para aprovisionar recursos individualmente
 	Con CloudFormation tenemos una forma declarativa de esbozar, de dibujar una infraestructura de AWS para cualquier recurso.
 	podemos desplegar una infraestructura como código IaaC
 	Productividad, es posible distruir y volver a crear una infraestructura en el cloud sobre la marcha
-		--Scale your infrastructure
-		--Extend and manage your infrastructure
-		--Automate resource management
+		* Scale your infrastructure
+		* Extend and manage your infrastructure
+		* Automate resource management
 	
-Amazon Cloud Development Kit -> CDK		https://aws.amazon.com/cdk/
+## 📦 Amazon Cloud Development Kit -> CDK		https://aws.amazon.com/cdk/
 	Permite definir una infraestructura en la nube utilizando un lenguaje conocido.
 	Se conecta con AWS CloudFormation 
 
-AWS Elastic Beanstalk -> PaaS	https://aws.amazon.com/elasticbeanstalk/
-	--Easily migrate, deploy, and scale full-stack applications on AWS
+## 📦 AWS Elastic Beanstalk -> PaaS	https://aws.amazon.com/elasticbeanstalk/
+	Easily migrate, deploy, and scale full-stack applications on AWS
 	Con AWS Elastic Beanstalk, el usuario proporciona ajustes de código y configuración, y Elastic Beanstalk implementa los recursos necesarios para realizar tareas:
-		-Es una visión centrada en el desarrollador de la implementación de una app en AWS
-		-Utiliza todos los componentes que hemos visto antes: EC2, ASG, ELB, RDS, etc.
-		-Se tiene control total sobre la configuración
-		-Es gratuito, pero se paga por las instancias subyacentes
-		-Servicio gestionado, todo es manejado por Beanstalk, sólo el código de la app es responsabilidad del desarrollador
+		* Es una visión centrada en el desarrollador de la implementación de una app en AWS
+		* Utiliza todos los componentes que hemos visto antes: EC2, ASG, ELB, RDS, etc.
+		* Se tiene control total sobre la configuración
+		* Es gratuito, pero se paga por las instancias subyacentes
+		* Servicio gestionado, todo es manejado por Beanstalk, sólo el código de la app es responsabilidad del desarrollador
 	Existen tres modelos de arquitectura:
 		1. Despliegue de una única instancia.
 		2. LB + ASG:  lo que sería el balanceador con el grupo de escalado automático, que es ideal para aplicaciones web de producción o preproducción y
@@ -432,7 +432,7 @@ AWS Elastic Beanstalk -> PaaS	https://aws.amazon.com/elasticbeanstalk/
 	Tiene soporte para muchas plataformas o lenguajes
 	Con Beanstalk, el desarrollador solo se preocupa por el código
 	
-AWS CodeDeploy	https://aws.amazon.com/codedeploy/
+## 📦 AWS CodeDeploy	https://aws.amazon.com/codedeploy/
 	Automate code deployment to maintain application uptime
 	Desplegar apps automáticamente
 	Funciona con instancias EC2
@@ -440,7 +440,7 @@ AWS CodeDeploy	https://aws.amazon.com/codedeploy/
 	Servicio híbridos
 	Los servidores deber ser aprivisionados y configurados previamente con el agente de CodeDeploy
 	
-AWS CodeCommit	https://aws.amazon.com/codecommit/
+## 📦 AWS CodeCommit	https://aws.amazon.com/codecommit/
 	--Securely host highly scalable private Git repositories and collaborate on code
 	Antes de enviar el código de la app a los servidores, es necesario almacenario en algún lugar
 	Para control de versiones, regularmente se utiliza GitHub
@@ -451,7 +451,7 @@ AWS CodeCommit	https://aws.amazon.com/codecommit/
 		Escalable y de alta disponibilidad
 		Privado, seguro, integrado con AWS
 	
-AWS CodeBuild		https://aws.amazon.com/codebuild/
+## 📦 AWS CodeBuild		https://aws.amazon.com/codebuild/
 	--Build and test code with automatic scaling
 	Servicio de construcción de código en el Cloud
 	Compila el código fuente, ejecuta las pruebas y produce paquetes que están listos para ser desplegados por CodeDeploy, por ejemplo
@@ -459,7 +459,7 @@ AWS CodeBuild		https://aws.amazon.com/codebuild/
 	Totalmente gestionado, sin servidor
 	Sólo se paga por el tiempo de compilación
 	
-AWS CodePipeline (Capa de orquestación)		https://aws.amazon.com/codepipeline/
+## 📦 AWS CodePipeline (Capa de orquestación)		https://aws.amazon.com/codepipeline/
 	--Automate continuous delivery pipelines for fast and reliable updates
 	Orquesta los diferentes pasos para que el código sea empujado automáticamente  a producción
 	Código -> Construir -> Probar -> Aprovionar -> Desplegar
@@ -467,22 +467,22 @@ AWS CodePipeline (Capa de orquestación)		https://aws.amazon.com/codepipeline/
 	Ventajas
 		Totalmente gestionado, compatible con CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, CloudFormation, GitHub y plugins
 		
-AWS CodeArtifact	https://aws.amazon.com/codeartifact
+## 📦 AWS CodeArtifact	https://aws.amazon.com/codeartifact
 	--Secure, scalable, and cost-effective package management for software development
 	Es una gestión de artefactos segura, escalable y rentable para el desarrollo de software
 	Paquetes de software dependen unos de otros, esto se le llama dependencia de Software
 	Almacenar y recuperar estas dependencias se llama Gestión de artefactos
 	Funciona con herramientas comunes de gestión de dependencias como Maven, Gradle, npm, yarn, twine, pip y Nuget
 	
-AWS CodeStar	https://aws.amazon.com/es/codestar/
+## 📦 AWS CodeStar	https://aws.amazon.com/es/codestar/
 	Interfaz de usuario unificada para gestionar fácilmente las actividades de desarrollo de software en un solo lugar
 	Es un forma rápida de empezar a configurar correctamente CodeCommit, CodePipeline, CodeBuild, CodeDeploy, Elastic  Beanstalk, EC2, etc
 
-AWS Cloud9	https://aws.amazon.com/cloud9
+## 📦 AWS Cloud9	https://aws.amazon.com/cloud9
 	Es un IDE en la nube para escribir, ejecutar y depurar código
 	Permite colaboración de código en tiempo real
 	
-AWS System Manager (SSM)	https://aws.amazon.com/systems-manager/
+## 📦 AWS System Manager (SSM)	https://aws.amazon.com/systems-manager/
 	--Manage nodes at scale on AWS and in multicloud and hybrid environments
 	Ayuda a gestionar tus sistemas EC2 y On-Premises a escala
 	Otro servicio híbrido de AWS
@@ -494,15 +494,15 @@ AWS System Manager (SSM)	https://aws.amazon.com/systems-manager/
 		Se necesita instalar el agente SSM en los sistemas que se controlan
 		Con el agente, es posible ejecutar comandos, parchear y configurar nuestros servidores
 		
-AWS OpsWorks	https://aws.amazon.com/documentation-overview/opsworks/
+## 📦 AWS OpsWorks	https://aws.amazon.com/documentation-overview/opsworks/
 	--AWS OpsWorks is a configuration management service that provides managed instances of Chef and Puppet. Chef and Puppet are automation platforms that allow you to use code to automate the configurations of your servers. 
 	Chef y Puppet ayudan a realizar la configuración del servidor de forma automática, o acciones repetitivas
 	Funciona con AC2 y VM On-Premises
 	Es una alternativa a AWS SSM		
 	
-Servicios Globales
+# 📖  Servicios Globales
 
-Amazon Route 53		https://aws.amazon.com/route53/
+## 📦 Amazon Route 53		https://aws.amazon.com/route53/
 	--A reliable and cost-effective way to route end users to Internet applications
 	Es un DNS gestionado (Sistemas de nombres de dominio)
 	DNS es una colección de reglas y registros que ayuda a los clientes a entender cómo llegar a un servidor a través de las URL
