@@ -928,7 +928,7 @@ Amazon Route 53
 		Define zona de confianza: Cuenta de AWS o AWS Organization
 		Acceso fuera de zona de confianza = Hallazgos
 		
-Machine Learning
+## 📖 Machine Learning
 	
 	AWS Rekognition
 		Este servicio nos permite encontrar y detectar objetos, personas, textos y escenas en imágenes y videos mediante machine learning, lo cual permite realizar análisis facial y también búsqueda facial para verificar la identidad de usuarios y hacer un recuento de personas.
@@ -1184,23 +1184,22 @@ Familia de productos AWS Snow
 Amazon CodeWhisperer-Amazon Q Developer
 	Es un complemento de programación basado en inteligencia artificial. Analiza el código y los comentarios del desarrollador según programa en su entorno de desarrollo integrado. Utiliza el procesamiento de lenguaje natural para comprender los comentarios que hace el desarrollador y así completar el código. Al entender los comentarios en inglés, CodeWhisperer genera funciones completas y bloques de código que se adaptan a las descripciones del desarrollador. Además, CodeWhisperer analiza el resto del código y se asegura de que el generado coincide con el estilo y las convenciones de nomenclatura que ha usado el desarrollador.
 	
-Traspaso a la nube
-	AWS Well-Architected Framework
+## 📖 AWS Well-Architected Framework - Traspaso a la nube
 		Ayuda arquitectos-clientes a comprender cómo diseñar y operar sistemas fiables, seguros, eficientes y rentables en la nube de AWS. 
 		
-	Well-Architected Framework se basa en seis pilares:
-		-Excelencia operativa-Operational Excellence
+## 📦 Well-Architected Framework se basa en seis pilares:
+		* Excelencia operativa-Operational Excellence
 			es la capacidad de ejecutar y supervisar sistemas para ofrecer valor empresarial y mejorar continuamente los procesos y procedimientos de soporte.
 			--Operations as Code
 			--Frequent, small, reversible changes
 			--Anticipate failure
 			--learn from all mistakes
-		-Seguridad-Security
+		* Seguridad-Security
 			es la capacidad de proteger la información, los sistemas y los activos y, al mismo tiempo, ofrecer valor empresarial mediante evaluaciones de riesgos y estrategias de mitigación.
 			--Use a foundational identity
 			--Security at all layers
 			--Encription in transit y at rest
-		-Fiabilidad-Reliability
+		* Fiabilidad-Reliability
 			es la capacidad de un sistema para hacer lo siguiente:
 				-Recuperarse de las interrupciones de la infraestructura o del servicio
 				-Adquirir recursos de computación de forma dinámica para satisfacer la demanda
@@ -1208,37 +1207,37 @@ Traspaso a la nube
 			--Automatic Failure recovery
 			--Scale horizontally
 			--Stop guessin capacity
-		-Eficiencia de rendimiento-Performance Efficiency
+		* Eficiencia de rendimiento-Performance Efficiency
 			es la capacidad de utilizar los recursos de computación de forma eficiente para satisfacer los requisitos del sistema y mantener esa eficiencia a medida que la demanda cambia y evoluciona la tecnología.
 			--Pick the right tool for de the job
 			--Use servelees
 			--Go global in minutus
-		-Optimización de costes-Cost Optimization
+		* Optimización de costes-Cost Optimization
 			es la capacidad de ejecutar sistemas para ofrecer valor empresarial al precio más bajo.
 			--Cloud financial management
 			--Measure efficiciency
 			--Analyze and attribute expenditures
-		-Sostenibilidad-Sustainability
+		* Sostenibilidad-Sustainability
 			es la capacidad de mejorar continuamente los impactos de la sostenibilidad mediante la reducción del consumo de energía y el aumento de la eficiencia en todos los componentes de una carga de trabajo, maximizando los beneficios de los recursos proporcionados y minimizando los recursos totales requeridos.
 			--Aspire for maximum utilization
 			--Adopt more efficiente hardware
 			--Used managed services
 			
-	Seis ventajas de la computación en la nube:
-		-Pasar de gasto inicial a gasto variable.
+## 📦 Seis ventajas de la computación en la nube:
+		* Pasar de gasto inicial a gasto variable.
 			Los gastos iniciales incluyen centros de datos, servidores físicos y otros recursos en los que tendrías que invertir antes de utilizar los recursos de computación. 
-		-Aprovechar las economías de escala masiva.
+		* Aprovechar las economías de escala masiva.
 			Con la computación en la nube, puedes lograr un coste variable menor al que puedes obtener por tu cuenta. 
-		-Dejar de adivinar la capacidad.
+		* Dejar de adivinar la capacidad.
 			Con la computación en la nube, no tienes que predecir cuánta capacidad de infraestructura necesitarás antes de desplegar una aplicación.
-		-Aumentar la velocidad y la agilidad.
+		* Aumentar la velocidad y la agilidad.
 			La flexibilidad de la computación en la nube facilita el desarrollo y la implementación de aplicaciones.
-		-Dejar de gastar dinero en funcionamiento y mantenimiento de los centros de datos.
+		* Dejar de gastar dinero en funcionamiento y mantenimiento de los centros de datos.
 			La computación en la nube en los centros de datos suele requerir que gastes más dinero y tiempo en administrar la infraestructura y los servidores.
-		-Lograr un alcance global en cuestión de minutos.
+		* Lograr un alcance global en cuestión de minutos.
 			La presencia global de AWS Cloud permite desplegar aplicaciones rápidamente para clientes de todo el mundo, a la vez que les proporcionas una baja latencia.
 			
-El examen AWS Certified Cloud Practitioner incluye cuatro dominios:
+## 📦 El examen AWS Certified Cloud Practitioner incluye cuatro dominios:
 	1. Conceptos de la nube
 	2. Seguridad y conformidad
 	3. Tecnología
