@@ -930,7 +930,7 @@ Amazon Route 53
 		
 ## 📖 Machine Learning
 	
-	AWS Rekognition
+## 📦 AWS Rekognition
 		Este servicio nos permite encontrar y detectar objetos, personas, textos y escenas en imágenes y videos mediante machine learning, lo cual permite realizar análisis facial y también búsqueda facial para verificar la identidad de usuarios y hacer un recuento de personas.
 		Casos de Uso
 			Etiquetado
@@ -939,19 +939,19 @@ Amazon Route 53
 			Búsqueda y verificación de famosos
 			Trayectoria
 			
-	AWS Transcribe
+## 📦 AWS Transcribe
 		Servicio que convierte automáticamente el habla en texto
 		Utiliza un proceso de deep learning llamado reconocimiento automático del habla (ASR) para convertir el habla en texto de forma rápida y precisa
 		Elimina automáticamente la información de Identificación Personal PII
 		
-	Amazon Polly
+## 📦 Amazon Polly
 		El cual nos permite hacer lo contrario de Amazon Transcribe.
 		Nos permite convertir el texto en voz real utilizando Deep Learning o aprendizaje profundo en español, permitiendo así crear aplicaciones que hablan muy fácilmente
 		
-	AWS Translate
+## 📦 AWS Translate
 		Traducción natural y precisa de idiomas
 		
-	Amazon Lex y Connect
+## 📦 Amazon Lex y Connect
 		Lex tiene la misma tecnología que impulsa a Alexa
 			Reconocimiento Automático del habla ASR para convertir habla en texto
 			Comprensión del lenguaje Natural para reconocer la intención del texto, de las personas que llaman
@@ -959,43 +959,43 @@ Amazon Route 53
 			Recibe llamadas, crea flujos de contacto, centro de contacto visual bastado en la nube
 			Puede integrarse con otros sistemas CRM o AWS
 			
-	Amazon Comprehend
+## 📦 Amazon Comprehend
 		Sirve para el Procesamiento del Lenguaje Natural, también conocido como Natural Languaje Processing NLP.
 		Utiliza el Machine learning para encontrar ideas y relaciones en el texto
 		
-	AWS SageMaker 
+## 📦 AWS SageMaker 
 		es un servicio de machine learning muy reconocido mundialmente de AWS.
 		Es un servicio totalmente gestionado que permite a los desarrolladores o científicos de datos construir modelos de machine learning.
 			
-	Amazon Forecast
+## 📦 Amazon Forecast
 		Servicio para hacer predicciones.
 		Es un servicio totalmente gestionado que utiliza el machine learning para ofrecer predicciones muy precisas.
 		
-	Amazon Kendra
+## 📦 Amazon Kendra
 		Es un servicio de búsqueda de documentos totalmente gestionado y potenciado por el machine learning.
 
 		Extrae respuestas de un documento, como un documento de texto, un PDF, un HTML, un PowerPoint, un Word, o incluso la página de preguntas frecuentes donde tenemos una fuente de datos.
 		
-	Amazon Personalize
+## 📦 Amazon Personalize
 		Servicio que utiliza Machine Learning y es totalmente gestionado. Utiliza machine learning para crear aplicaciones con recomendaciones personalizadas en tiempo real, por ejemplo, recomendaciones o una reclasificación de productos personalizados.
 	
-	Amazon Textract
+## 📦 Amazon Textract
 	el servicio de extracción de texto, el cual nos permite extraer automáticamente el texto, la escritura y los datos de cualquier documento, únicamente escaneando todo esto utilizando la inteligencia artificial y el machine learning.
 			
 		
 		
-Supervisión y Análisis, monitorización
+## 📖 Supervisión y Análisis, monitorización
 	
-	Amazon CloudWatch
+## 📦 Amazon CloudWatch
 		Es un servicio web que permite supervisar y administrar diversas métricas y configurar acciones de alarma basadas en los datos de esas métricas.
 		
 		Con CloudWatch, puedes crear alarmas que efectúen acciones automáticamente si el valor de tu métrica ha superado un umbral predefinido o queda por debajo de él. 
 		
-	AWS CloudTrail
+## 📦 AWS CloudTrail
 		Es un servicio que permite llevar a cabo auditorías de gobernanza, de conformidad, operativas y de riesgo en su cuenta de AWS.
 		Registra las llamadas a la API de tu cuenta. La información registrada incluye la identidad de la persona que llama a la API, la hora de la llamada a la API, la dirección IP de origen de la persona que llama a la API y mucho más.
 		
-	AWS Trusted Advisor
+## 📦 AWS Trusted Advisor
 		Es un servicio web que inspecciona tu entorno de AWS y proporciona recomendaciones en tiempo real de acuerdo con las prácticas recomendadas de AWS.
 		Trusted Advisor compara sus resultados con las prácticas recomendadas de AWS en cinco categorías:
 			-Optimización de costes
@@ -1004,21 +1004,21 @@ Supervisión y Análisis, monitorización
 			-Tolerancia a errores
 			-límites de los servicios
 			
-	AWS Health Dashboard
+## 📦 AWS Health Dashboard
 		muestra estado general de los servicios de AWS
 		Anteriormente llamado AWS Personal Health Dashboard (PHD)
 		AWS Account Health Dashboard proporciona una visión personalizada del rendimiento y la disponibilidad de los servicios de AWS subyacentes a tus recursos de AWS
 		Puede agregar datos de toda una AWS Organizations
 		
-	AWS X-Ray
+## 📦 AWS X-Ray
 		Ayuda a los desarrolladores a analizar y depurar aplicaciones distribuidas de producción, como las constituidas con una arquitectura de microservicios.
 	
-	AWS CodeGuru
+## 📦 AWS CodeGuru
 		Revisiones de código automatizadas y recomendaciones sobre el rendimiento de las aplicaciones
 		
 		Se muestra toda la información relevante
 			
-Precios y soporte
+## 📖 Precios y soporte
 	
 	El nivel gratuito de AWS te permite comenzar a usar determinados servicios sin tener que preocuparte por incurrir en costes durante el periodo especificado. 
 	
@@ -1038,41 +1038,43 @@ Precios y soporte
 	Facturación unificada
 		Un servicio que te permite administrar varias cuentas de AWS desde una ubicación central.
 	
-	AWS Organizations también ofrece la opción de facturación unificada.
+## 📦 AWS Organizations 
+	también ofrece la opción de facturación unificada.
 		Helps you centrally manage and govern your environment as you grow and scale your AWS resources. Using AWS Organizations, you can create accounts and allocate resources, group accounts to organize your workflows, apply policies for governance, and simplify billing by using a single payment method for all of your accounts. AWS Organizations is integrated with other AWS services so you can define central configurations, security mechanisms, audit requirements, and resource sharing across accounts in your organization. AWS Organizations is available to all AWS customers at no additional charge.
 		
-	AWS Control Tower
+## 📦 AWS Control Tower
 		Servicio nos proporciona una forma fácil de configurar y también gobernar un entorno AWS multicuenta, seguro y conforme a las mejores prácticas.
 		Se ejecuta sobre las organizaciones de AWS e implementa las SCP (Políticas de Control de Servicios)
 		
-	AWS Resource Access Manager RAM
+## 📦 AWS Resource Access Manager RAM
 		Servicio que nos va a permitir compartir recursos de AWS que nosotros poseamos con otras cuentas de Amazon.
 		Comparte con cualquier cuenta o dentro de tu organización
 		Evita la duplicación de recursos
 		
-	AWS Service Catalog
+		
+## 📦 AWS Service Catalog
 		Servicio que permite a las empresas organizar y gestionar catálogos de servicios aprobados para que se utilicen en toda la empresa en concreto.
 		
-	AWS Budgets
+## 📦 AWS Budgets
 		Con AWS Budgets, establezca presupuestos personalizados para hacer un seguimiento de los costos y el uso, y responda rápidamente a las alertas que recibe mediante correo electrónico o notificaciones de SNS cuando supera un límite.
 		
-	AWS Cost Explorer
+## 📦 AWS Cost Explorer
 		Es una herramienta que te permite visualizar, comprender y administrar los costes y el uso de AWS a lo largo del tiempo.
 		
 		AWS Cost Explorer incluye un informe predeterminado de los costes y el uso de los cinco servicios principales de AWS con costes acumulados.
 		
-	AWS Support
+## 📦 AWS Support
 		AWS ofrece cuatro planes de soporte diferentes para ayudarte a solucionar problemas, reducir los costes y usar de forma eficiente los servicios de AWS. 
 		
 		Se puede elegir entre los siguientes planes de soporte para satisfacer las necesidades de tu empresa:
-			-Basic Support: 
+		* Basic Support: 
 				es gratuito para todos los clientes de AWS. Incluye acceso a documentos técnicos, documentación y comunidades de soporte. Con Basic Support, también puedes ponerte en contacto con AWS si tienes preguntas sobre facturación y aumentos del límite de servicio.
-			-Developer Support
-			-Business Support
-			-Enterprise On-Ramp
-			-Enterprise
+		* Developer Support
+		* Business Support
+		* Enterprise On-Ramp
+		* Enterprise
 		
-		Planes de Soporte
+## 📦 Planes de Soporte
 			Basic, Servicio de atención al cliente 24-7 y comunidades, Trusted Advisor limitado, Personal Health Dashboard
 			Developer, Basic+, acceso por correo en horario laboral
 			Business, 24-7, Destinado a cargas de trabajo de producción, Trusted Advisor ilimitado
@@ -1082,16 +1084,16 @@ Precios y soporte
 		Administrador técnico de cuenta (TAM)
 			Los planes Enterprise On-Ramp y Enterprise Support incluyen acceso a un administrador técnico de cuenta (TAM).
 	
-	AWS Marketplace
+## 📦 AWS Marketplace
 		Es un catálogo digital que incluye miles de listas de software de proveedores de software independientes. Puedes usar AWS Marketplace para buscar, probar y comprar software que se ejecute en AWS. 
 		
-	Modelos precios en AWS
+## 📦 Modelos precios en AWS
 		Paga por lo que usas
 		Ahorra cuando reserves
 		Paga menos usando más
 		Paga menos al crecer AWS
 		
-	Herramientas de verificación de Costos y Gastos
+## 📦 Herramientas de verificación de Costos y Gastos
 		Dashboard de facturación
 		Tags -> Etiquetas de asignacion de costes e informes, para organizar recursos
 		Cost and Usage Reports (AWS CUR), contiene el conjunto más completo de datos de costes y uso de AWS disponible. Enumera el uso de AWS para cada categoría de servicio utilizada por una cuenta y sus usuarios de IAM
@@ -1106,20 +1108,20 @@ Precios y soporte
 		
 		
 		
-Migración e Innovación
+## 📖 Migración e Innovación
 
 	AWS CAF -> AWS Cloud Adoption Framework	 https://aws.amazon.com/cloud-adoption-framework/
-		--The AWS Cloud Adoption Framework (AWS CAF) leverages AWS experience and best practices to help you digitally transform and accelerate your business outcomes through innovative use of AWS. AWS CAF identifies specific organizational capabilities that underpin successful cloud transformations. These capabilities provide best practice guidance that helps you improve your cloud readiness. AWS CAF groups its capabilities in six perspectives: Business, People, Governance, Platform, Security, and Operations. Each perspective comprises a set of capabilities that functionally related stakeholders own or manage in the cloud transformation journey. Use the AWS CAF to identify and prioritize transformation opportunities, evaluate and improve your cloud readiness, and iteratively evolve your transformation roadmap.
+		--The AWS Cloud Adoption Framework (AWS CAF) leverages AWS experience and best practices to help you digitally transform and accelerate your business outcomes through innovative use of AWS. AWS CAF identifies specific organizational capabilities that underpin successful cloud transformations. These capabilities provide best practice guidance that helps you improve your cloud readiness. AWS CAF groups its capabilities in six perspectives: Business, People, Governance, Plataform, Security, and Operations. Each perspective comprises a set of capabilities that functionally related stakeholders own or manage in the cloud transformation journey. Use the AWS CAF to identify and prioritize transformation opportunities, evaluate and improve your cloud readiness, and iteratively evolve your transformation roadmap.
 		Ofrece directrices sobre seis áreas de interés, denominadas perspectivas.
 		
-	Perspectiva de comercial-business
+	## 📦 Perspectiva de comercial-business
 		Garantiza que las TI estén en línea con las necesidades empresariales y que las inversiones en TI se vinculen a los resultados empresariales clave.
 		Utiliza la perspectiva de negocio para crear un caso empresarial sólido de adopción de la nube y priorizar las iniciativas de adopción. Asegúrate de que tus estrategias y objetivos empresariales estén en línea con tus estrategias y objetivos de TI.
 		Los roles comunes en la perspectiva de negocio incluyen:
-			-Administradores de negocio
-			-Administradores de finanzas
-			-Responsables de presupuestos
-			-Inversores estratégicos
+			* Administradores de negocio
+			* Administradores de finanzas
+			* Responsables de presupuestos
+			* Inversores estratégicos
 			
 	Perspectiva de personal-People
 		Apoya el desarrollo de una estrategia de administración de cambio en toda la organización para adoptar la nube con éxito.
@@ -1163,7 +1165,7 @@ Migración e Innovación
 		-Aumente los ingresos
 		-Mejore la eficiencia operativa
 			
-Estrategias de Migración
+## 📦 Estrategias de Migración
 	-Volver a alojar-Rehosting  "lift-and-shift" implica mover aplicaciones sin realizar cambios. 
 	-Redefinir la plataforma-Replatforming  "lift, tinker and shift" implica realizar algunas optimizaciones en la nube para obtener un beneficio tangible. La optimización se logra sin cambiar la arquitectura principal de la aplicación.
 	-Refactorizar-Rearquitectura-Refactoring / Re-architecting   implica volver a imaginar cómo se diseña y se desarrolla una aplicación mediante el uso de funciones nativas en la nube. 
